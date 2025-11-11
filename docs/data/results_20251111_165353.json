@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "timestamp": "20251111_165353",
+    "mode": "1 inscriptions",
+    "backend": "ollama",
+    "space": null,
+    "model": "llama3.2-vision",
+    "total_processed": 1,
+    "successful": 1,
+    "failed": 0,
+    "prompts_used": [
+      "description",
+      "script_id",
+      "transliteration"
+    ]
+  },
+  "results": [
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+      "translation_ground_truth": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point.",
+      "num_images": 15,
+      "image_files": [
+        "im0037246.jpg",
+        "im0037250.jpg",
+        "im0041782.jpg",
+        "im0041783.jpg",
+        "im0041898.jpg",
+        "im0042041.jpg",
+        "im0042922.jpg",
+        "im0042923.jpg",
+        "im0042924.jpg",
+        "im0042925.jpg",
+        "im0042926.jpg",
+        "im0042927.jpg",
+        "im0042928.jpg",
+        "im0042929.jpg",
+        "im0042930.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037246.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037250.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041782.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041783.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041898.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042041.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042922.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042923.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042924.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042925.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042926.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042927.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042928.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042929.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042930.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "model='llama3.2-vision' created_at='2025-11-11T14:48:49.649943Z' done=True done_reason='stop' total_duration=8586513584 load_duration=1400051625 prompt_eval_count=37 prompt_eval_duration=180836500 eval_count=209 eval_duration=4226314884 response='The image depicts a large, dark gray rock with a rough texture, featuring a prominent scratch or carving on its surface. The rock is situated in a rocky environment, surrounded by other rocks and boulders.\\n\\n*   **Rock Characteristics:**\\n    *   **Color:** Dark gray\\n    *   **Texture:** Rough\\n    *   **Size:** Large\\n*   **Scratch or Carving:**\\n    *   **Location:** Center of the rock\\n    *   **Appearance:** Prominent\\n    *   **Shape:** Irregular\\n    *   **Depth:** Not visible\\n*   **Rocky Environment:**\\n    *   **Surrounding Rocks:** Several smaller rocks and boulders\\n    *   **Surface:** Rocky terrain\\n    *   **Lighting:** Sunlight casting shadows on the rocks\\n\\nThe image presents a close-up view of a large, dark gray rock with a prominent scratch or carving on its surface, set against a rocky environment with surrounding rocks and boulders.' thinking=None context=[128006, 882, 128007, 271, 58, 1931, 12, 15, 60, 75885, 1148, 499, 1518, 304, 420, 2217, 304, 7872, 13, 720, 14139, 389, 904, 1495, 11, 1672, 25712, 11, 477, 4477, 9621, 389, 279, 9998, 7479, 13, 128009, 128006, 78191, 128007, 271, 791, 2217, 62991, 264, 3544, 11, 6453, 18004, 7091, 449, 264, 11413, 10651, 11, 16850, 264, 21102, 19307, 477, 77791, 389, 1202, 7479, 13, 578, 7091, 374, 31183, 304, 264, 56617, 4676, 11, 23712, 555, 1023, 23902, 323, 293, 619, 388, 382, 9, 256, 3146, 36152, 85084, 25, 1035, 262, 353, 256, 3146, 1668, 68063, 12538, 18004, 198, 262, 353, 256, 3146, 8959, 68063, 58421, 198, 262, 353, 256, 3146, 1730, 68063, 20902, 198, 9, 256, 3146, 66608, 759, 477, 3341, 4504, 25, 1035, 262, 353, 256, 3146, 4812, 68063, 5955, 315, 279, 7091, 198, 262, 353, 256, 3146, 30327, 68063, 18042, 14168, 198, 262, 353, 256, 3146, 12581, 68063, 12227, 23108, 198, 262, 353, 256, 3146, 20361, 68063, 2876, 9621, 198, 9, 256, 3146, 36152, 88, 11847, 25, 1035, 262, 353, 256, 3146, 23912, 1067, 287, 69131, 68063, 26778, 9333, 23902, 323, 293, 619, 388, 198, 262, 353, 256, 3146, 24627, 68063, 48641, 25911, 198, 262, 353, 256, 3146, 14235, 287, 68063, 8219, 4238, 25146, 35612, 389, 279, 23902, 271, 791, 2217, 18911, 264, 3345, 5352, 1684, 315, 264, 3544, 11, 6453, 18004, 7091, 449, 264, 21102, 19307, 477, 77791, 389, 1202, 7479, 11, 743, 2403, 264, 56617, 4676, 449, 14932, 23902, 323, 293, 619, 388, 13]",
+          "success": true,
+          "error": null,
+          "duration_seconds": 8.612700939178466e-09,
+          "model": "llama3.2-vision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "model='llama3.2-vision' created_at='2025-11-11T14:48:53.051266Z' done=True done_reason='stop' total_duration=3316797459 load_duration=112653667 prompt_eval_count=77 prompt_eval_duration=147048000 eval_count=135 eval_duration=2720259955 response='**Answer:**\\n\\n1. There is no text or inscription visible in the image.\\n2. There is no writing system or script visible in the image.\\n3. There are no characters visible in the image.\\n4. There is no text or inscription visible in the image, so it is not possible to determine how it was created.\\n\\nThe image appears to be a close-up of a rock with some scratches or marks on it, but there is no text or inscription visible. The rock appears to be a dark gray or black color, and the scratches or marks are not clearly visible. It is not possible to determine the origin or meaning of the marks without more information.' thinking=None context=[128006, 882, 128007, 271, 58, 1931, 12, 15, 60, 2127, 56956, 420, 2217, 15884, 13, 4815, 16, 13, 2209, 1070, 904, 1495, 477, 51670, 9621, 5380, 17, 13, 1442, 10035, 11, 1148, 4477, 1887, 477, 5429, 1587, 433, 5101, 311, 387, 5380, 18, 13, 61885, 279, 17910, 315, 279, 5885, 499, 1518, 627, 19, 13, 2209, 279, 1495, 49267, 11, 24937, 11, 477, 5439, 304, 1063, 1023, 1648, 1980, 3513, 3230, 922, 1148, 499, 23846, 13, 128009, 128006, 78191, 128007, 271, 334, 16533, 25, 57277, 16, 13, 2684, 374, 912, 1495, 477, 51670, 9621, 304, 279, 2217, 627, 17, 13, 2684, 374, 912, 4477, 1887, 477, 5429, 9621, 304, 279, 2217, 627, 18, 13, 2684, 527, 912, 5885, 9621, 304, 279, 2217, 627, 19, 13, 2684, 374, 912, 1495, 477, 51670, 9621, 304, 279, 2217, 11, 779, 433, 374, 539, 3284, 311, 8417, 1268, 433, 574, 3549, 382, 791, 2217, 8111, 311, 387, 264, 3345, 5352, 315, 264, 7091, 449, 1063, 66839, 477, 15785, 389, 433, 11, 719, 1070, 374, 912, 1495, 477, 51670, 9621, 13, 578, 7091, 8111, 311, 387, 264, 6453, 18004, 477, 3776, 1933, 11, 323, 279, 66839, 477, 15785, 527, 539, 9539, 9621, 13, 1102, 374, 539, 3284, 311, 8417, 279, 6371, 477, 7438, 315, 279, 15785, 2085, 810, 2038, 13]",
+          "success": true,
+          "error": null,
+          "duration_seconds": 3.335476875305176e-09,
+          "model": "llama3.2-vision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        }
+      }
+    }
+  ]
+}

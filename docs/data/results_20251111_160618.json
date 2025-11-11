@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "timestamp": "20251111_160618",
+    "mode": "TEST MODE (10 inscriptions)",
+    "space": "llava-onevision",
+    "model": "llava-onevision",
+    "total_processed": 10,
+    "successful": 10,
+    "failed": 0,
+    "prompts_used": [
+      "description",
+      "script_id",
+      "transliteration"
+    ]
+  },
+  "results": [
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+      "translation_ground_truth": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point.",
+      "num_images": 15,
+      "image_files": [
+        "im0037246.jpg",
+        "im0037250.jpg",
+        "im0041782.jpg",
+        "im0041783.jpg",
+        "im0041898.jpg",
+        "im0042041.jpg",
+        "im0042922.jpg",
+        "im0042923.jpg",
+        "im0042924.jpg",
+        "im0042925.jpg",
+        "im0042926.jpg",
+        "im0042927.jpg",
+        "im0042928.jpg",
+        "im0042929.jpg",
+        "im0042930.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037246.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037250.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041782.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041783.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041898.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042041.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042922.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042923.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042924.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042925.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042926.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042927.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042928.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042929.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042930.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l kʿb bn wqs¹",
+      "translation_ground_truth": "By Kʿb son of Wqs¹",
+      "num_images": 1,
+      "image_files": [
+        "im0037283.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037283.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 3",
+      "transliteration_ground_truth": "l {h}{b} bn {b}{q} {b}{n} {w}d{s¹}",
+      "translation_ground_truth": "By {Hb} son of{ Bq} {son of} {Wqs¹}",
+      "num_images": 1,
+      "image_files": [
+        "im0037284.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%203/im0037284.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l khl bn mtn",
+      "translation_ground_truth": "By Khl son of Mtn",
+      "num_images": 2,
+      "image_files": [
+        "im0037259.jpg",
+        "im0037286.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037259.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037286.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 5",
+      "transliteration_ground_truth": "l s¹ʿd",
+      "translation_ground_truth": "By S¹ʿd",
+      "num_images": 1,
+      "image_files": [
+        "im0037260.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%205/im0037260.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 6",
+      "transliteration_ground_truth": "l mḥrm {b}{n} {k}{t}r",
+      "translation_ground_truth": "By Mḥrm {son of} {Ktr}",
+      "num_images": 6,
+      "image_files": [
+        "im0038419.jpg",
+        "im0038418.jpg",
+        "im0038420.jpg",
+        "im0041792.jpg",
+        "im0041901.jpg",
+        "im0042047.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0038419.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0038418.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0038420.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0041792.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0041901.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%206/im0042047.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 7",
+      "transliteration_ground_truth": "l r{z}n bn ybnʾl",
+      "translation_ground_truth": "By {Rzn} son of Ybnʾl",
+      "num_images": 10,
+      "image_files": [
+        "im0038421.jpg",
+        "im0038422.jpg",
+        "im0038423.jpg",
+        "im0038424.jpg",
+        "im0038425.jpg",
+        "im0041903.jpg",
+        "im0042051.jpg",
+        "im0042054.jpg",
+        "im0042055.jpg",
+        "im0042058.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0038421.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0038422.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0038423.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0038424.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0038425.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0041903.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0042051.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0042054.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0042055.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%207/im0042058.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 8",
+      "transliteration_ground_truth": "l bnyt bn lḥmʾl bn wqf",
+      "translation_ground_truth": "By Bnyt son of Lḥmʾl son of Wqf",
+      "num_images": 8,
+      "image_files": [
+        "im0038426.jpg",
+        "im0038427.jpg",
+        "im0038428.jpg",
+        "im0038429.jpg",
+        "im0042045.jpg",
+        "im0042049.jpg",
+        "im0042052.jpg",
+        "im0042057.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0038426.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0038427.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0038428.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0038429.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0042045.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0042049.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0042052.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%208/im0042057.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l ḥrb bn ġr h- dr",
+      "translation_ground_truth": "Ḥrb son of Ġr was here",
+      "num_images": 8,
+      "image_files": [
+        "im0038449.jpg",
+        "im0038450.jpg",
+        "im0038451.jpg",
+        "im0038452.jpg",
+        "im0042046.jpg",
+        "im0042050.jpg",
+        "im0042053.jpg",
+        "im0042056.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0038449.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0038450.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0038451.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0038452.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042046.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042050.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042053.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042056.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 10",
+      "transliteration_ground_truth": "l tts¹ bn dʾy",
+      "translation_ground_truth": "By Tts¹ son of Dʾy",
+      "num_images": 3,
+      "image_files": [
+        "im0038453.jpg",
+        "im0038454.jpg",
+        "im0041902.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%2010/im0038453.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%2010/im0038454.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%2010/im0041902.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
+          "duration": null,
+          "model": "llava-onevision"
+        }
+      }
+    }
+  ]
+}

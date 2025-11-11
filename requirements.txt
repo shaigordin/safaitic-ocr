@@ -1,0 +1,24 @@
+# Safaitic OCR - VLM Testing Pipeline
+# Python dependencies
+
+# Core dependencies
+pandas>=2.0.0
+pillow>=10.0.0
+requests>=2.31.0
+
+# FREE VLM Inference via HuggingFace Gradio Spaces
+gradio_client>=1.0.0
+
+# Notebook dependencies (optional)
+jupyter>=1.0.0
+notebook>=7.0.0
+ipywidgets>=8.0.0
+tqdm>=4.65.0
+
+# Evaluation and analysis
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# Visualization (optional)
+matplotlib>=3.7.0
+

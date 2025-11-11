@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Data - DO NOT COMMIT IMAGES
+data/examples/
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+# Results (but keep docs/data for GitHub Pages)
+results/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+

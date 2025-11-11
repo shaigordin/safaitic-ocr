@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "timestamp": "20251111_170923",
+    "mode": "1 inscriptions",
+    "backend": "ollama",
+    "space": null,
+    "model": "llama3.2-vision",
+    "total_processed": 1,
+    "successful": 1,
+    "failed": 0,
+    "prompts_used": [
+      "description",
+      "script_id",
+      "transliteration"
+    ]
+  },
+  "results": [
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+      "translation_ground_truth": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point.",
+      "num_images": 15,
+      "image_files": [
+        "im0037246.jpg",
+        "im0037250.jpg",
+        "im0041782.jpg",
+        "im0041783.jpg",
+        "im0041898.jpg",
+        "im0042041.jpg",
+        "im0042922.jpg",
+        "im0042923.jpg",
+        "im0042924.jpg",
+        "im0042925.jpg",
+        "im0042926.jpg",
+        "im0042927.jpg",
+        "im0042928.jpg",
+        "im0042929.jpg",
+        "im0042930.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037246.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037250.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041782.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041783.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041898.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042041.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042922.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042923.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042924.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042925.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042926.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042927.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042928.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042929.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042930.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image depicts a large, dark gray rock with a rough texture, featuring several scratches and marks on its surface. The rock is situated in a rocky area, surrounded by other rocks of varying sizes and shapes. The overall atmosphere of the image suggests a natural, outdoor setting, possibly a desert or mountainous region. The presence of the rock and its scratches implies that it may have been used for some purpose, such as a tool or a marker, but the exact nature of its use is unclear. The image does not provide any additional context or information about the rock or its surroundings, leaving the viewer to interpret its significance and purpose.",
+          "success": true,
+          "error": null,
+          "duration_seconds": 5.687883625000001e-09,
+          "model": "llama3.2-vision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "The image shows a large rock with some scratches on it. The scratches appear to be some sort of writing or inscription, but they are not clear enough to be read. The writing system or script is not identifiable. The characters are not legible and do not have any distinct features. The text is carved into the rock.",
+          "success": true,
+          "error": null,
+          "duration_seconds": 1.9156855e-09,
+          "model": "llama3.2-vision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "To transliterate the Safaitic inscription, we will follow these steps:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions\n\n**Step 1: Identify visible characters**\n\nThe inscription is written in a right-to-left direction. The visible characters are:\n\n* ʾ\n* b\n* g\n* d\n* h\n* w\n* z\n* ḥ\n* ṭ\n* y\n* k\n* l\n* m\n* n\n* s\n* ʿ\n* f\n* ṣ\n* q\n* r\n* t\n* ṯ\n* ḫ\n* ḏ\n* ḍ\n* ġ\n\n**Step 2: Provide Latin transliteration**\n\nBased on the visible characters, the Latin transliteration is:\n\nl-b-g-d-h-w-z-ʾ-ʿ-f-ṣ-q-r-t-ʾ-ʾ-ʾ\n\n**Step 3: Mark uncertain readings with [?]**\n\nThere are no damaged or uncertain readings in this inscription.\n\n**Step 4: Note damaged portions**\n\nThere are no damaged portions in this inscription.\n\n**Answer:** l-b-g-d-h-w-z-ʾ-ʿ-f-ṣ-q-r-t-ʾ-ʾ-ʾ\n\nThe Safaitic inscription can be transliterated as l-b-g-d-h-w-z-ʾ-ʿ-f-ṣ-q-r-t-ʾ-ʾ-ʾ.",
+          "success": true,
+          "error": null,
+          "duration_seconds": 7.453978042e-09,
+          "model": "llama3.2-vision"
+        }
+      }
+    }
+  ]
+}

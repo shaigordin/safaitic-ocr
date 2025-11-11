@@ -1,0 +1,72 @@
+# Test scenarios configuration
+# Define different testing approaches
+
+scenarios:
+  basic_recognition:
+    description: "Basic script identification and character recognition"
+    prompts:
+      - "script_identification"
+      - "character_recognition"
+    temperature: 0.1
+    images_per_inscription: 1
+    
+  full_transliteration:
+    description: "Complete transliteration pipeline"
+    prompts:
+      - "transliteration_attempt"
+    temperature: 0.1
+    images_per_inscription: 1
+    include_primer: true
+    
+  translation_test:
+    description: "Translation and interpretation"
+    prompts:
+      - "translation_attempt"
+    temperature: 0.2  # Slightly higher for more creative interpretation
+    images_per_inscription: 1
+    
+  multi_image_comparison:
+    description: "Leverage multiple images of same inscription"
+    prompts:
+      - "comparative_analysis"
+    temperature: 0.1
+    images_per_inscription: -1  # All available images
+    combine_method: "compare"
+    
+  quality_assessment:
+    description: "Assess inscription preservation and readability"
+    prompts:
+      - "condition_assessment"
+    temperature: 0.1
+    images_per_inscription: 1
+    
+  comprehensive:
+    description: "Full battery of tests"
+    prompts:
+      - "script_identification"
+      - "character_recognition"
+      - "transliteration_attempt"
+      - "translation_attempt"
+      - "condition_assessment"
+    temperature: 0.1
+    images_per_inscription: 1
+
+# Evaluation settings
+evaluation:
+  character_weight: 0.4
+  word_weight: 0.4
+  semantic_weight: 0.2
+  
+  # Thresholds for categorization
+  thresholds:
+    excellent: 0.8
+    good: 0.6
+    fair: 0.4
+    poor: 0.0
+
+# Batch processing settings
+batch:
+  max_concurrent: 1  # Number of parallel requests (keep at 1 for local Ollama)
+  retry_attempts: 2
+  retry_delay: 5  # seconds
+  save_interval: 10  # Save intermediate results every N inscriptions

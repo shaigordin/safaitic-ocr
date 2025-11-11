@@ -1,0 +1,25 @@
+# Configuration for VLM models
+# Add your API keys and model settings here
+
+models:
+  llama_vision:
+    name: "llama3.2-vision"
+    type: "ollama"
+    base_url: "http://localhost:11434"
+    timeout: 120
+    default_temperature: 0.1
+    
+  # Example for future integrations:
+  # gpt4_vision:
+  #   name: "gpt-4-vision-preview"
+  #   type: "openai"
+  #   api_key: "${OPENAI_API_KEY}"  # Use environment variable
+  #   max_tokens: 4096
+  #   default_temperature: 0.1
+  
+  # claude_vision:
+  #   name: "claude-3-opus-20240229"
+  #   type: "anthropic"
+  #   api_key: "${ANTHROPIC_API_KEY}"
+  #   max_tokens: 4096
+  #   default_temperature: 0.1

@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "timestamp": "20251111_182057",
+    "mode": "3 inscriptions",
+    "backend": "ollama",
+    "space": null,
+    "model": "llama3.2-vision",
+    "total_processed": 3,
+    "successful": 3,
+    "failed": 0,
+    "prompts_used": [
+      "description",
+      "script_id",
+      "transliteration"
+    ]
+  },
+  "results": [
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+      "translation_ground_truth": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point.",
+      "num_images": 15,
+      "image_files": [
+        "im0037246.jpg",
+        "im0037250.jpg",
+        "im0041782.jpg",
+        "im0041783.jpg",
+        "im0041898.jpg",
+        "im0042041.jpg",
+        "im0042922.jpg",
+        "im0042923.jpg",
+        "im0042924.jpg",
+        "im0042925.jpg",
+        "im0042926.jpg",
+        "im0042927.jpg",
+        "im0042928.jpg",
+        "im0042929.jpg",
+        "im0042930.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037246.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037250.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041782.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041783.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0041898.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042041.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042922.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042923.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042924.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042925.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042926.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042927.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042928.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042929.jpg",
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0042930.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image depicts a large, dark gray rock with a rough texture, featuring a prominent scratch mark in the center. The rock is situated amidst other rocks, with a bright white background suggesting a sunny day. The scratch mark appears to be a deliberate carving, possibly created by a tool or object. The surrounding rocks are also rough and gray, with some displaying cracks or fissures. The overall atmosphere of the image is one of ruggedness and natural beauty, with the scratch mark adding a sense of human presence to the otherwise barren landscape.",
+          "success": true,
+          "error": null,
+          "duration_seconds": 6.280541375e-09,
+          "model": "llama3.2-vision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "**Answer:**\n\n1. There is no text or inscription visible in the image.\n2. There is no writing system or script visible in the image.\n3. There are no characters visible in the image.\n4. There is no text or inscription visible in the image, so it is not possible to determine how it was created.\n\nThe image appears to be a close-up of a rock with some scratches or marks on it, but there is no text or inscription visible. The rock appears to be a dark gray or black color, and the scratches or marks are not clearly visible. It is not possible to determine the characteristics of the characters or how they were created because there are no characters visible in the image.",
+          "success": true,
+          "error": null,
+          "duration_seconds": 3.48058e-09,
+          "model": "llama3.2-vision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15",
+      "transliteration_ground_truth": "l kʿb bn wqs¹",
+      "translation_ground_truth": "By Kʿb son of Wqs¹",
+      "num_images": 1,
+      "image_files": [
+        "im0037283.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15/im0037283.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark gray rock with a flat surface. The rock is covered in a layer of dirt and dust, and there are several cracks and crevices on its surface. The rock appears to be a type of rock that is commonly found in the area where it was found.\n\nOn the surface of the rock, there is a piece of paper with some writing on it. The paper is crumpled and has a few creases, and it appears to be a piece of paper that was used as a makeshift writing surface. The writing on the paper is in a language that is not immediately recognizable, and it appears to be a form of writing that is not commonly used.\n\nIn the background of the image, there is a rock wall that appears to be made of the same type of rock as the rock in the foreground. The rock wall is made up of several large rocks that have been placed together to form a wall. The rocks are all different sizes and shapes, and they appear to be made of the same type of rock as the rock in the foreground.\n\nOverall, the image appears to be a photograph of a rock that has been used as a writing surface. The rock is covered in a layer of dirt and dust, and it has several cracks and crevices on its surface. The paper on the rock is crum\nThe image shows a large, dark gray rock with a flat surface. The rock is covered in a layer of dirt and dust, and there are several cracks and crev\nThe image shows a large, dark gray rock with a flat surface. The rock is covered in a layer of dirt and\nThe image shows a large, dark gray rock with a flat surface. The rock is covered in a layer of\nThe image shows a large, dark gray rock with a flat surface. The rock is covered in a layer of\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, dark\nThe image shows a large, ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...",
+          "success": true,
+          "error": null,
+          "duration_seconds": 2.411594605445862e-08,
+          "model": "llama3.2-vision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        }
+      }
+    },
+    {
+      "siglum": "BES15 3",
+      "transliteration_ground_truth": "l {h}{b} bn {b}{q} {b}{n} {w}d{s¹}",
+      "translation_ground_truth": "By {Hb} son of{ Bq} {son of} {Wqs¹}",
+      "num_images": 1,
+      "image_files": [
+        "im0037284.jpg"
+      ],
+      "ociana_urls": [
+        "https://ociana.osu.edu/uploads/inscription_image/image/BES15%203/im0037284.jpg"
+      ],
+      "analyses": {
+        "description": {
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        },
+        "script_id": {
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is an inscription on the rock.\n\n2. The writing appears to be in an ancient, non-­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­",
+          "success": true,
+          "error": null,
+          "duration_seconds": 4.125873327255249e-09,
+          "model": "llama3.2-vision"
+        },
+        "transliteration": {
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "",
+          "success": false,
+          "error": "timed out",
+          "duration_seconds": null,
+          "model": "llama3.2-vision"
+        }
+      }
+    }
+  ]
+}
