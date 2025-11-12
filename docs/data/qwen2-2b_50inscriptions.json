@@ -1,0 +1,1711 @@
+{
+  "metadata": {
+    "timestamp": "20251112_122039",
+    "model": "mlx-community/Qwen2-VL-2B-Instruct-4bit",
+    "backend": "mlx-vlm",
+    "num_inscriptions": 50,
+    "num_prompts": 3
+  },
+  "results": [
+    {
+      "inscription_siglum": "BES15 1",
+      "num_images": 15,
+      "ground_truth": {
+        "transliteration": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+        "translation": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point."
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark-colored rock with a rough, uneven surface. The rock appears to be part of a larger pile of rocks, which are scattered around it. The rock has several etchings or inscriptions carved into its surface, which are visible in the image. The inscriptions are in a linear style, with horizontal lines and some vertical lines, creating a pattern that is somewhat difficult to read due to the wear and tear on the rock. The rock is surrounded by other rocks, which are also dark and uneven, indicating that the area is likely a natural, possibly rocky landscape. The lighting in the image suggests that it was taken outdoors, possibly in a desert or rocky terrain.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are characterized by their stylized and complex design.\n3. The characters are small and intricately carved, with a mix of horizontal and vertical lines.\n4. The text is carved into the surface of a large, dark-colored rock, which appears to be part of a larger rock formation or pile of rocks.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more structured format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\n### Safaitic Inscription Transliteration\n\n1. L (by/of) + name\n2. L (by/of) + name\n3. L (by/of) + name\n4. L (by/of) + name\n5. L (by/of) + name\n6. L (by/of) + name\n7. L (by/of) + name\n8. L (by/of) + name\n9. L (by/of) + name\n10. L (by/of) + name\n11. L (by/of) + name\n12. L (by/of) + name\n13. L (by/of) + name\n14. L (by/of) + name\n15. L (by/of) + name\n16. L (by/of) + name\n17. L (by/of) + name\n18. L (by/of) + name\n19. L (by/of) + name\n20. L (by/of) + name\n21. L (by/of) + name\n22. L (by/of) + name\n23. L (by/of) + name\n24. L (by/of) + name\n25. L (by/of) + name\n26. L (by/of) + name\n27. L (by/of) + name\n28. L (by/of) + name\n29. L (by/of) + name\n30. L (by/of) + name\n31. L (by/of) + name\n32. L (by/of) + name\n33. L (by/of) + name\n34. L (by/of) + name\n35. L (by/of) + name\n36. L (by/of) + name\n37. L (by/of) + name\n38. L (by/of) + name\n39. L (by/of) + name\n40. L (by/of) + name\n",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 2",
+      "num_images": 1,
+      "ground_truth": {
+        "transliteration": "l kʿb bn wqs¹",
+        "translation": "By Kʿb son of Wqs¹"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark-colored stone with several inscriptions etched into its surface. The stone is surrounded by other stones, and there is a small, horizontal ruler or measuring stick placed on the stone. The inscriptions appear to be in a language or script that is not immediately recognizable, but they seem to be written in a cursive style. The stone is part of a larger collection of stones, and the surrounding stones are also dark and appear to be part of a larger structure or monument. The overall scene suggests an archaeological or historical context, possibly related to ancient writing or inscriptions.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are typically carved on stone or other hard materials.\n3. The characters are small and appear to be carved into the stone, with some of the characters being more clearly defined than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L (by/of)\n   - Name (unknown)\n\n2. Provide Latin transliteration:\n   - L (by/of) → \"l\"\n   - Name (unknown) → \"name\"\n\n3. Mark uncertain readings with [?]:\n   - L (by/of) → \"?\"\n   - Name (unknown) → \"?\"\n\n4. Note damaged portions:\n   - The inscription is partially damaged, with some characters obscured or missing.\n\nThe Safaitic inscription on the rock is:\n\n1. L (by/of)\n2. Name (unknown)\n3. L (by/of)\n4. Name (unknown)\n5. L (by/of)\n6. Name (unknown)\n7. L (by/of)\n8. Name (unknown)\n9. L (by/of)\n10. Name (unknown)\n11. L (by/of)\n12. Name (unknown)\n13. L (by/of)\n14. Name (unknown)\n15. L (by/of)\n16. Name (unknown)\n17. L (by/of)\n18. Name (unknown)\n19. L (by/of)\n20. Name (unknown)\n21. L (by/of)\n22. Name (unknown)\n23. L (by/of)\n24. Name (unknown)\n25. L (by/of)\n26. Name (unknown)\n27. L (by/of)\n28. Name (unknown)\n29. L (by/of)\n30. Name (unknown)\n31. L (by/of)\n32. Name (unknown)\n33. L (by/of)\n34. Name (unknown)\n35. L (by/of)\n36. Name (unknown)\n37. L (by/of)\n38. Name (unknown)\n39. L (by/of)\n40. Name (unknown)\n41. L (by/of)\n42. Name (unknown)\n43. L (by/of)\n44. Name (unknown)\n45. L (by/of)\n46. Name (unknown)\n47. L (by/of)\n48. Name (unknown)\n49. L (by/of)\n50. Name (unknown)\n51. L (by/of)\n52. Name (unknown)\n53",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 3",
+      "num_images": 1,
+      "ground_truth": {
+        "transliteration": "l {h}{b} bn {b}{q} {b}{n} {w}d{s¹}",
+        "translation": "By {Hb} son of{ Bq} {son of} {Wqs¹}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark-colored rock with petroglyphs carved into its surface. The petroglyphs appear to be a series of human figures, some of which are more clearly defined than others. The figures are depicted in a stylized, abstract manner, with some parts of the figures appearing lighter or more faded. The rock is part of a larger stone structure, as indicated by the presence of other rocks around it. \n\nA measuring tape is placed on the rock, likely used for scale or reference. The tape has a black and white checkered pattern. The background of the image is a mix of light and dark, with the rock being the primary focus. The overall scene suggests an archaeological or historical context, possibly indicating a site where ancient petroglyphs have been discovered.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are characterized by their distinctive shape and use of horizontal lines.\n3. The characters are small and appear to be carved into the stone, with some characters being more prominent than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 4",
+      "num_images": 2,
+      "ground_truth": {
+        "transliteration": "l khl bn mtn",
+        "translation": "By Khl son of Mtn"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with some inscriptions visible. The stone appears to be weathered and has a rough texture, with patches of dirt and small debris. The inscriptions are written in a cursive style, with the text appearing to be in a language that is not immediately recognizable. The writing is relatively small and difficult to read, and the surface shows signs of wear and tear, indicating that the stone has been exposed to the elements for a long time. The background is slightly blurred, focusing attention on the inscriptions on the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou periods.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface. The surface is rough and uneven, indicating the stone is old and possibly weathered.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere's the transliteration:\n\n1. Identify visible characters: \n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. Provide Latin transliteration:\n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n3. Mark uncertain readings with [?]:\n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n4. Note damaged portions:\n   - The inscription is damaged, with some characters missing or faded.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 5",
+      "num_images": 1,
+      "ground_truth": {
+        "transliteration": "l s¹ʿd",
+        "translation": "By S¹ʿd"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, dark-colored stone with inscriptions carved into its surface. The stone is lying on a gravelly surface, and a measuring tape is placed vertically on the stone, running from the top to the bottom. The tape has a black and white checkered pattern.\n\nThe inscriptions on the stone are in a stylized, possibly ancient, script. The text appears to be in a combination of horizontal and vertical lines, with some characters appearing to be connected or overlapping. The characters are light-colored, possibly white or off-white, against the dark stone background.\n\nThe stone's surface shows signs of wear and weathering, with some areas appearing more worn than others. The gravelly surface around the stone is composed of small, rounded stones, and the overall scene suggests an archaeological or historical context, possibly indicating the stone's significance in a historical or cultural context.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its distinctive cursive style and use of horizontal lines.\n3. The characters are white and appear to be carved into the stone.\n4. The text is carved into the stone, with the characters aligned horizontally and spaced evenly apart.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription on the stone looks like this:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere's the transliteration in a more readable format:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\n1. **l** - ˈl\n2. **b** - ˈb\n3. **g** - ˈɡ\n4. **d** - ˈd\n5. **h** - ˈh\n6. **w** - ˈw\n7. **z** - ˈz\n8. **y** - ˈy\n9. **k** - ˈk\n10. **l** - ˈl\n11. **m** - ˈm\n12. **n** - ˈn\n13. **s** - ˈs\n14. **t** - ˈt\n15. **q** - ˈq\n16. **r** - ˈr\n17. **t** - ˈt\n18. **h** - ˈh\n19. **d** - ˈd\n20. **k** - ˈk\n21. **l** - ˈl\n22. **m** - ˈm\n23. **n** - ˈn\n24. **s** - ˈs\n25. **t** - ˈt\n26. **q** - ˈq\n27. **r** - ˈr\n28. **t** - ˈt\n29. **h** - ˈh\n30. **d** - ˈd\n31",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 6",
+      "num_images": 6,
+      "ground_truth": {
+        "transliteration": "l mḥrm {b}{n} {k}{t}r",
+        "translation": "By Mḥrm {son of} {Ktr}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark-colored rock with a rough texture. The rock appears to be part of a larger structure or monument, possibly a stone carving or petroglyph. On the surface of the rock, there are several inscriptions or markings. The most prominent inscription is \"CETE,\" which is written in a cursive style. Below this, there are two additional inscriptions, \"11\" and \"II,\" written in a similar style. The rock has several cracks and crevices, and there is a small, horizontal ruler or measuring stick placed on the rock, likely used for scale or reference. The background consists of other rocks and sunlight, suggesting that the photo was taken outdoors.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters having a more stylized appearance.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the transliterations and notes:\n\n1. **Visible Characters**:\n   - l: ʾ\n   - b: g\n   - d: h\n   - w: z\n   - z: ḥ\n   - ṭ: ṭ\n   - y: k\n   - k: l\n   - l: m\n   - m: n\n   - n: s\n   - s: ʿ\n   - f: ṣ\n   - q: r\n   - r: t\n   - t: ṯ\n   - ḫ: ḏ\n   - ḍ: ḍ\n   - ġ: ġ\n\n2. **Latin Transliteration**:\n   - ʾ: l\n   - b: g\n   - d: h\n   - w: z\n   - z: ḥ\n   - ṭ: ṭ\n   - y: k\n   - k: l\n   - l: m\n   - m: n\n   - n: s\n   - s: ʿ\n   - f: ṣ\n   - q: r\n   - r: t\n   - t: ṯ\n   - ḫ: ḏ\n   - ḍ: ḍ\n   - ġ: ġ\n\n3. **Uncertain Readings**:\n   - ʾ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   - ṭ: ʾ\n   -",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 7",
+      "num_images": 10,
+      "ground_truth": {
+        "transliteration": "l r{z}n bn ybnʾl",
+        "translation": "By {Rzn} son of Ybnʾl"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, dark-colored rocks. The rocks appear to be part of a larger structure or monument, possibly an ancient stone carving or petroglyph. The surface is covered with inscriptions or markings, which are visible in the cracks and crevices of the rocks. The inscriptions are in a script that appears to be ancient or historical, possibly in a language or script that is not immediately recognizable. The stones are irregular in shape and size, with some showing signs of weathering and erosion. The lighting in the image suggests that it was taken during the daytime, with shadows cast on the rocks, indicating the presence of sunlight.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but it is not clear whether it is ancient Chinese or a modern Chinese script.\n3. The characters are carved into the rock, with some characters appearing more clearly than others.\n4. The text is carved into the rock, with the characters etched into the stone surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 8",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l bnyt bn lḥmʾl bn wqf",
+        "translation": "By Bnyt son of Lḥmʾl son of Wqf"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, dark-colored rocks. The rocks appear to be part of a larger structure or monument, possibly an ancient stone carving or petroglyph. The surface is covered with inscriptions or markings, which are visible in the cracks and crevices of the rocks. The inscriptions are in a script that appears to be a combination of symbols and possibly some text, although the exact meaning is not clear from the image alone. The rocks are uneven and have a rough texture, indicating they have been exposed to the elements over time. The lighting suggests that the photo was taken outdoors, possibly in a desert or arid region, given the dry and rocky appearance of the stones.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but it is not clear whether it is ancient or modern.\n3. The characters are carved into the rock, with some characters appearing more clearly than others.\n4. The text is carved into the rock, with the characters etched into the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [↩]\n\nThe inscription is:\n\n1. ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n\nTransliteration:\n\n1. ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n\nLatin transliteration:\n\n1. ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n\nNote: The inscription is damaged, and some characters may not be fully visible. The transliteration assumes the best possible reconstruction based on the visible characters.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 9",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l ḥrb bn ġr h- dr",
+        "translation": "Ḥrb son of Ġr was here"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, dark-colored rocks. The rocks appear to be part of a larger structure or monument, possibly an ancient stone carving or petroglyph. The surface is covered with inscriptions or markings, which are visible in the cracks and crevices of the rocks. The inscriptions are in a script that appears to be ancient or historical, possibly in a language or script that is not immediately recognizable. The shadows cast by the rocks and the light from the top left corner create a dramatic effect, highlighting the intricate details of the inscriptions. The overall scene suggests a historical or archaeological site, where ancient inscriptions have been preserved over time.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Han dynasty.\n3. The characters are carved into the rock, with some characters appearing more clearly than others.\n4. The text is carved into the rock, with some characters appearing more clearly than others. The characters are relatively small and appear to be part of a larger inscription.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 10",
+      "num_images": 3,
+      "ground_truth": {
+        "transliteration": "l tts¹ bn dʾy",
+        "translation": "By Tts¹ son of Dʾy"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with several large, dark-colored rocks. The rocks appear to be part of a larger structure or monument, possibly an ancient stone carving or petroglyph. The surface is covered with inscriptions or markings, which are visible in the cracks and crevices of the rocks. The inscriptions are in a script that appears to be ancient or historical, possibly in a language or script that is not immediately recognizable. The stones are uneven and have a rough texture, indicating they have been exposed to the elements over time. The lighting suggests that the photo was taken during the daytime, with sunlight casting shadows on the rocks.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Han dynasty.\n3. The characters are carved into the rock, with some characters appearing more clearly than others.\n4. The text is carved into the rock, with the characters etched into the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [↩]\n\nThe inscription is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nThe transliteration is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nThe characters are:\n\n1. l (l)\n2. b (b)\n3. g (g)\n4. d (d)\n5. h (h)\n6. w (w)\n7. z (z)\n8. ḥ (h)\n9. ṭ (r)\n10. y (y)\n11. k (k)\n12. l (l)\n13. m (m)\n14. n (n)\n15. s (s)\n16. ʿ (u)\n17. f (f)\n18. ṣ (s)\n19. q (q)\n20. r (r)\n21. t (t)\n22. ṯ (y)\n23. ḫ (h)\n24. ḏ (d)\n25. ḍ (d)\n26. ġ (g)\n27. l (l)\n28. m (m)\n29. n (n)\n30. s (s)\n31. ʿ (u)\n32. f (f)\n33. ṣ (s)\n34. q (q)\n35. r (r)\n36. t (t)\n37. ṯ (y)\n38. ḫ (h)\n39. ḏ (d)\n40. ḍ (d)\n41. ġ (g)\n42. l (l)\n43. m (m)\n44. n (n)\n45. s (s)\n46. ʿ (u)\n",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 11",
+      "num_images": 3,
+      "ground_truth": {
+        "transliteration": "l yf{l} bn frʾ",
+        "translation": "By {Yfl} son of Frʾ"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, weathered stone with a horizontal line of inscriptions etched into its surface. The stone is situated in a rocky environment, with other rocks and debris visible around it. The inscriptions appear to be in a script that resembles ancient writing, possibly from a prehistoric or historical period. The stone is positioned on a flat surface, and a checkered ruler is placed on top of it, likely for measurement or alignment purposes. The overall scene suggests an archaeological or historical context, possibly indicating the presence of ancient petroglyphs or inscriptions.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with a mix of horizontal and vertical lines.\n3. The characters are small and appear to be carved into the stone.\n4. The text is carved into the stone, with the lines running horizontally and vertically.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the translations and transliterations:\n\n1. Identify visible characters\n   - l: ˈl\n   - b: ˈb\n   - g: ˈɡ\n   - d: ˈd\n   - h: ˈh\n   - w: ˈw\n   - z: ˈz\n   - ḥ: ˈh\n   - ṭ: ˈt\n   - y: ˈy\n   - k: ˈk\n   - l: ˈl\n   - m: ˈm\n   - n: ˈn\n   - s: ˈs\n   - ʿ: ˈuː\n   - f: ˈf\n   - ṣ: ˈs\n   - q: ˈk\n   - r: ˈr\n   - t: ˈt\n   - ṯ: ˈr\n   - ḫ: ˈh\n   - ḏ: ˈd\n   - ḍ: ˈd\n   - ġ: ˈg\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 12",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l mtn bn qtl",
+        "translation": "By Mtn son of Qtl"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, weathered stone block with inscriptions carved into its surface. The stone appears to be made of a dark, possibly granite or similar rock, and it is partially broken, revealing the inscriptions. The inscriptions are in a script that resembles ancient Chinese characters, with some characters appearing in a lighter color than others. The text is written in a cursive style, and the characters are relatively small in size. The stone is surrounded by other stones, and there is a small, horizontal black and white checkered ruler placed on the stone for measurement or reference. The background is a mix of sunlight and shadows, indicating that the photo was taken outdoors in a natural setting.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but it is not clear if it is written in Chinese or another script.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L (by/of)\n   - Name (not clearly visible)\n\n2. Provide Latin transliteration:\n   - L (by/of) → \"l\"\n   - Name → \"name\"\n\n3. Mark uncertain readings with [?]:\n   - L (by/of) → [?] \n   - Name → [?] \n\n4. Note damaged portions:\n   - The inscription is partially damaged, with some characters obscured by cracks and stones.\n\nThe Safaitic inscription on the rock is:\n\n\"L name\"",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 13",
+      "num_images": 7,
+      "ground_truth": {
+        "transliteration": "l ḫdmt bn ḥrb bn ġṯ h- {d}r ʿm f ʿm",
+        "translation": "Ḫdmt son of Ḥrb son of Ġṯ was here year after year"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone block. The stone has a rough texture and is partially covered in small, scattered debris, indicating it has been exposed to the elements for a long time. On the surface of the stone, there are several inscriptions or markings. The text appears to be in a script that is not immediately recognizable, but it seems to be written in a cursive style. The markings are somewhat faded and appear to be etched or carved into the stone. A small, horizontal line of a ruler or marker is visible on the left side of the stone, likely used for measurement or alignment. The background consists of other large stones, some of which are also weathered and covered in debris. The overall scene suggests an archaeological or historical context, possibly indicating the presence of ancient inscriptions or markings.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but the exact script cannot be determined without closer inspection.\n3. The characters are carved into the stone, with some characters being more clearly visible than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 14",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l mnʿr",
+        "translation": "By Mnʿr"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone with inscriptions carved into its surface. The stone appears to be made of a dark, possibly granite or similar rock, and is partially covered by smaller stones and debris. The inscriptions are in a script that resembles ancient writing, possibly from a historical or cultural context. The text is etched into the stone, with some characters clearly visible and others less discernible due to the wear and age of the stone.\n\nA small, horizontal line of a ruler or measuring tool is placed on the stone, likely used for scale or reference. The background consists of more stones and possibly dirt or gravel, indicating that the stone is part of a larger structure or site.\n\nThe inscriptions are in a script that appears to be a combination of cursive and more formal writing styles, suggesting a mix of historical and possibly religious or ceremonial significance. The wear and tear on the stone suggest that it has been exposed to the elements for a long time, which could imply its importance or historical value.\n\nOverall, the image provides a detailed view of an ancient stone with inscriptions, indicating a cultural or historical significance, and a ruler or measuring tool for scale.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but it is not clear whether it is written in Chinese or another script.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [!]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 15",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l lġz bn hʾs¹",
+        "translation": "By Lġz son of Hʾs¹"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a large, round stone with a weathered surface. The stone is predominantly dark gray with some lighter patches, and it appears to have been carved or etched with a pattern. The etching is visible on the surface of the stone, running diagonally from the center towards the edges. \n\nSurrounding the stone are several larger rocks, some of which are also etched or carved. The rocks are a mix of dark and light gray, and they are scattered around the stone, creating a rugged, natural environment. The ground around the stone is covered with small stones and debris, indicating that the area may have been exposed to the elements over time.\n\nIn the center of the image, there is a small, horizontal ruler or measuring tool placed on the stone. The ruler has a black and white checkered pattern, and it is positioned diagonally, running from the top left to the bottom right of the stone. The ruler appears to be used for measuring or marking purposes, possibly indicating the stone's dimensions or the etched pattern's dimensions.\n\nThe overall scene suggests an archaeological or historical context, possibly indicating a site or location with significant cultural or historical significance. The presence of the ruler suggests that the stone may have been used for measuring or marking purposes, which is common in archaeological contexts where precise measurements are required.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Chinese characters, possibly from the Shang or Zhou periods.\n2. The writing system or script appears to be Chinese.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 16",
+      "num_images": 3,
+      "ground_truth": {
+        "transliteration": "l {r}ʿ{y} bn ʾhwd bn ʿwḏ",
+        "translation": "By {Rʿy} son of ʾhwd son of ʿwḏ"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a stone surface with inscriptions carved into it. The stone appears to be a piece of slate or similar material, given its grey color and texture. The inscriptions are written in a stylized, possibly ancient script, and are visible on the surface of the stone. \n\nIn the foreground, there is a small, horizontal ruler or measuring tool placed on the stone. The ruler has a black and white checkered pattern, and it is oriented horizontally, with the markings running from left to right. \n\nThe stone surface is covered with small, irregularly shaped rocks and gravel, indicating that the area is likely an archaeological site or a historical site where such inscriptions have been discovered. The presence of the ruler suggests that the stone might have been used for measuring or marking purposes during the time it was carved, possibly for historical or archaeological purposes. \n\nThe overall scene suggests a historical or archaeological context, where the stone inscriptions have been discovered and are being studied or preserved.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its distinctive cursive style and use of horizontal lines.\n2. The writing system or script appears to be hieratic.\n3. The characters in the image are small and cursive, with horizontal lines connecting the strokes. The characters are evenly spaced and have a consistent thickness.\n4. The text appears to be carved into the stone, as indicated by the rough texture and the way the characters are etched into the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the steps to transcribe it:\n\n1. **Visible Characters**: \n   - l\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. **Latin Transliteration**:\n   - l -> l\n   - b -> b\n   - g -> g\n   - d -> d\n   - h -> h\n   - w -> w\n   - z -> z\n   - ḥ -> ḥ\n   - ṭ -> ṭ\n   - y -> y\n   - k -> k\n   - l -> l\n   - m -> m\n   - n -> n\n   - s -> s\n   - ʿ -> ʿ\n   - f -> f\n   - ṣ -> ṣ\n   - q -> q\n   - r -> r\n   - t -> t\n   - ṯ -> ṯ\n   - ḫ -> ḫ\n   - ḏ -> ḏ\n   - ḍ -> ḍ\n   - ġ -> ġ\n\n3. **Marking Uncertain Readings**:\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ (uncertain)\n   - ṭ -> ṭ",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 17",
+      "num_images": 3,
+      "ground_truth": {
+        "transliteration": "l mnʿ bn ʿlht w wgm",
+        "translation": "By Mnʿ son of ʿlht and he grieved"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of several large, dark-colored stones scattered on a sandy surface. The stones appear to be part of a larger collection or pile. In the center of the image, there is a horizontal line of white writing on one of the stones. The writing is in a cursive style and appears to be inscribed in a light-colored substance, possibly chalk or a similar material. The writing is relatively clear and legible, although the exact content of the text is not entirely discernible from the image. The surrounding stones are irregular in shape and size, with some showing signs of wear or damage. The overall scene suggests an archaeological or historical context, possibly related to ancient inscriptions or markings.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its distinctive cursive style and use of horizontal lines to connect characters.\n2. The writing system or script appears to be hieratic.\n3. The characters are written in a cursive style, with horizontal lines connecting the characters. The script is relatively small in size, and the characters are evenly spaced.\n4. The text is carved into the stone, as indicated by the presence of the checkered line, which is a common method for marking the edges of carved stone inscriptions.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere's the transliteration in Latin:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 18",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l ʿmr bn khl bn ḥr{b}",
+        "translation": "By ʿmr son of Khl son of {Ḥrb}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone slab. The stone appears to be made of a dark-colored material, possibly granite or another hard stone, and has a rough, uneven surface with visible cracks and indentations. The stone is partially covered in a layer of dust or dirt, indicating it has been exposed to the elements for some time.\n\nOn the surface of the stone, there are several inscriptions or markings. The most prominent inscription is a series of characters, which appear to be in a script that resembles Chinese or Japanese. The characters are written in a somewhat cursive style and are arranged in a somewhat random pattern. The characters are light in color, contrasting with the darker background of the stone.\n\nIn the lower right corner of the stone, there is a small, vertical line, possibly a marker or a part of a larger inscription. The line is white and has a black border, which is typical of markings used to indicate specific points or sections on a surface.\n\nThe stone is situated in a natural setting, likely outdoors, given the presence of the shadow cast by a person or object on the right side of the image. The shadow is dark and elongated, suggesting the light source is coming from the left side of the frame.\n\nOverall, the image depicts a weathered stone slab with inscriptions, possibly historical or cultural, found in an outdoor setting.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, but it is not clear if it is a modern or ancient script.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 19",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l wgm bn ʿly",
+        "translation": "By Wgm son of ʿly"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, irregularly shaped rocks scattered around. The stone surface appears to be made of a dark, possibly weathered material, possibly granite or another similar rock. There are several large, dark-colored rocks, some with visible cracks and grooves, indicating they have been exposed to the elements for a long time. \n\nIn the center of the image, there is a small, rectangular piece of paper or card with a black and white checkered pattern, possibly used for marking or measuring. The paper is placed on the stone surface, and its position suggests it might have been used for some purpose, such as marking a specific area or indicating a measurement.\n\nThe background consists of more rocks, some of which appear to be part of the same structure or formation, while others are isolated. The overall scene suggests an outdoor setting, possibly a rock formation or a natural monument, given the presence of the large rocks and the checkered paper.\n\nThere are no inscriptions, writings, or text visible on the stone surface in the image. The focus is on the natural rock formation and the small piece of paper placed on it.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Chinese characters, possibly from the Shang or Zhou periods.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L (by/of)\n   - Name (unknown)\n\n2. Provide Latin transliteration:\n   - L (by/of) → \"l\"\n   - Name (unknown) → \"name\"\n\n3. Mark uncertain readings with [?]:\n   - L (by/of) → \"l\"\n   - Name (unknown) → \"name\"\n\n4. Note damaged portions:\n   - L (by/of) → \"l\"\n   - Name (unknown) → \"name\"\n\nThe Safaitic inscription on the rock is \"l name\".",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 20",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l rkb bn qs¹m w tẓr mny",
+        "translation": "By Rkb son of Qs¹m and he awaited fate"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone block. The stone appears to be made of a dark, possibly gray or black, material, with visible cracks and wear. On the surface of the stone, there are several inscriptions or markings. The text is written in what appears to be a script or language, although the specific details of the writing are not entirely clear due to the wear and the angle at which the stone is viewed. \n\nA checkered line, likely a ruler or measuring tool, is placed on the stone, indicating a measurement or marking point. The background consists of other large stones, suggesting that this stone is part of a larger structure or monument. The overall scene suggests an archaeological or historical context, possibly indicating an ancient inscription or artifact.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou dynasties.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 21",
+      "num_images": 7,
+      "ground_truth": {
+        "transliteration": "l ʿmr bn ʿly",
+        "translation": "By ʿmr son of ʿly"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, rough-textured stone surface. The stone appears to be part of a larger structure or monument, possibly an ancient ruin or archaeological site. On the surface, there are several inscriptions or markings visible. The inscriptions are written in what appears to be a cursive or script style, and they are in a light color, possibly yellow or beige, contrasting with the dark stone.\n\nA checkered ruler is placed on the stone surface, likely used for measuring or indicating the size of the inscriptions. The ruler consists of a black and white checkered pattern, and it is positioned horizontally across the stone, with the top edge of the ruler aligned with the top edge of the stone.\n\nThe stone surface has some visible cracks and scratches, indicating it has been exposed to the elements over time. The overall condition of the stone suggests it has been exposed to weathering and possibly erosion, which is common in archaeological sites.\n\nThe inscriptions are relatively small and appear to be inscribed in a manner that is not immediately legible, but they are clearly visible and add to the historical or archaeological significance of the site. The presence of the ruler suggests that the inscriptions may have been studied or measured during archaeological excavation or research.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, specifically the Simplified Chinese characters.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the steps to transcribe it:\n\n1. **Visible Characters**:\n   - l\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. **Latin Transliteration**:\n   - l: L\n   - b: B\n   - g: G\n   - d: D\n   - h: H\n   - w: W\n   - z: Z\n   - ḥ: H\n   - ṭ: R\n   - y: Y\n   - k: K\n   - l: L\n   - m: M\n   - n: N\n   - s: S\n   - ʿ: F\n   - f: F\n   - ṣ: S\n   - q: Q\n   - r: R\n   - t: T\n   - ṯ: T\n   - ḫ: H\n   - ḏ: D\n   - ḍ: D\n   - ġ: G\n\n3. **Marking Uncertain Readings**:\n   - The inscription is not entirely clear, so some characters may be uncertain. The most likely characters are: l, b, g, d, h, w, z, ḥ, ṭ, y, k, l, m, n, s, ʿ, f, ṣ, q, r, t, ṯ, ḫ, ḏ, ḍ, and ġ. The characters ṭ, ṭ, ṭ, ṭ, ṭ, ṭ",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 22",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l ms²dt",
+        "translation": "By Ms²dt"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, dark-colored stones scattered around. The stone in the foreground has a rough texture and is marked with several lines of writing. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is commonly used in ancient Egyptian writing. The lines of writing are relatively small and spaced out, and there are some additional markings or scratches on the stone.\n\nIn the background, there are other large stones, some of which have similar markings or scratches. The surface is covered with small, scattered stones, and the overall setting appears to be an archaeological site or an area where historical artifacts are being studied. A checkered line ruler is placed on the stone, likely used for measurement or alignment purposes. The lighting suggests that the photo was taken outdoors, possibly under direct sunlight, which enhances the visibility of the writing on the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are typically carved on stone or metal.\n3. The characters are small and appear to be inscribed on a flat surface, possibly a stone slab or a flat rock.\n4. The text is carved into the surface of the stone, with the characters clearly visible.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe inscription appears to be a mix of Safaitic and Arabic characters, and it's difficult to transcribe accurately. Here's a rough translation:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe inscription seems to be a mix of Safaitic and Arabic characters, and it's difficult to transcribe accurately.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 23",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l n{k}f bn n----",
+        "translation": "By Nkf son of N----"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone block. The stone appears to be made of a dark, possibly volcanic rock, with a rough texture and some visible cracks. On the surface of the stone, there are two inscriptions or markings. The first inscription is a series of letters, which appear to be in a script that is not clearly legible. The second inscription is a series of numbers, which are also not clearly legible. \n\nIn the foreground, there is a black and white checkered ruler, which is used to measure the length of the stone. The ruler is placed horizontally on the stone, with the numbers \"10 cm\" clearly visible on it. The ruler is a standard ruler, commonly used for measuring lengths in centimeters.\n\nThe stone is set against a background of other similar stones, suggesting that it is part of a larger collection or collection site. The overall condition of the stone indicates it has been exposed to the elements for a long time, which is typical for such artifacts.\n\nGiven the context, these inscriptions could be historical or archaeological artifacts, possibly related to a specific event, date, or message. However, without further context or expertise in the field, the exact meaning or significance of these inscriptions remains speculative.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are typically carved into stone.\n3. The characters are small and appear to be carved into the stone surface, with some characters slightly eroded.\n4. The text is carved into the stone, and there is a checkered ruler placed on the stone to measure the length of the inscription.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L (by/of)\n   - Name (not clearly visible)\n   - L",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 24",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l wgdt bn ẓnn",
+        "translation": "By Wgdt son of Ẓnn"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, weathered stone with inscriptions carved into its surface. The stone appears to be made of a dark, possibly volcanic rock, with a rough texture and some visible cracks. The inscriptions are in a cursive script, written in a reddish-brown color, which contrasts with the stone's natural color. The text is aligned horizontally and reads as follows:\n\n```\nPOG + GUM\n```\n\nA small, black and white checkered ruler is placed on the stone, indicating a measurement of 10 cm. The background consists of more stone blocks and a sandy, uneven ground, suggesting an outdoor, possibly archaeological or historical site. The overall scene suggests a focus on ancient or historical artifacts.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters having a distinctive style.\n3. The characters are carved into the stone, with a clear distinction between the horizontal and vertical lines.\n4. The text is carved into the stone, with the characters clearly visible and legible.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the stone is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere is the transliteration in Latin:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nThe characters are:\n\n1. l (l)\n2. b (g)\n3. g (d)\n4. d (h)\n5. h (w)\n6. w (z)\n7. z (y)\n8. y (k)\n9. k (l)\n10. l (m)\n11. m (n)\n12. n (s)\n13. s (t)\n14. t (u)\n15. u (f)\n16. f (s)\n17. s (q)\n18. q (r)\n19. r (t)\n20. t (h)\n21. h (d)\n22. d (k)\n23. k (l)\n24. l (m)\n25. m (n)\n26. n (s)\n27. s (t)\n28. t (u)\n29. u (f)\n30. f (s)\n31. s (q)\n32. q (r)\n33. r (t)\n34. t (h)\n35. h (d)\n36. d (k)\n37. k (l)\n38. l (m)\n39. m (n)\n40. n (s)\n41. s (t)\n42. t (u)\n43. u (f)\n44. f (s)\n45. s (q)\n46. q (r)\n47. r (t)\n48. t (h)\n49. h (d)\n50. d (k)\n51. k (l)\n52. l (m)\n53. m (n)\n54. n (s)\n55. s (t)\n56. t (u)\n5",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 25",
+      "num_images": 7,
+      "ground_truth": {
+        "transliteration": "l hḏr bn qmṭ bn ṣrmt",
+        "translation": "By Hḏr son of Qmṭ son of Ṣrmt"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with inscriptions carved into it. The stone appears to be made of a dark, possibly volcanic rock, and the surface is rough and uneven. The inscriptions are in a stylized, linear script, which is characteristic of ancient writing systems, likely from a historical or archaeological context.\n\nThe inscriptions are arranged in a circular pattern, with the text running vertically and horizontally. The text appears to be in a language that uses a combination of horizontal and vertical lines, which is common in many ancient scripts, including those from the Near East and the Mediterranean region.\n\nIn the upper left corner of the image, there is a checkered pattern, which might be part of a ruler or measuring tool used for archaeological or historical research. The ruler is partially visible and has a white background with black and blue squares.\n\nThe stone surface is surrounded by other stone blocks, indicating that this is part of an archaeological excavation or a historical site. The overall condition of the stone suggests it has been exposed to the elements for a long time, which is typical of historical artifacts.\n\nGiven the context, the inscriptions likely provide information about the location, date, or significance of the site, which could be a temple, a marketplace, or a religious site. The presence of the ruler suggests that this area is being studied for its historical or archaeological value.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a cursive script, possibly in a language with a script that is not easily recognizable.\n3. The characters are small and appear to be written in a flowing manner, with some characters being more prominent than others.\n4. The text is carved into the stone, with the carvings visible on the surface of the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 26",
+      "num_images": 7,
+      "ground_truth": {
+        "transliteration": "----ʾmg {b}n {m}hrt",
+        "translation": "----ʾmg {son of} Mhrt"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with inscriptions carved into it. The stone appears to be made of a dark, possibly gray or black material, and it has a rough texture with visible cracks and scratches. The inscriptions are in a script that appears to be ancient, possibly Chinese or Japanese, given the style and characters. The text is written in a horizontal line, and the characters are relatively small in size. The stone is surrounded by other stones, and there is a checkered ruler with a scale marked in centimeters (cm) at the top, indicating the measurement of the stone. The background shows parts of other stones and some light-colored ground, suggesting that the stone is part of a larger structure or monument.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Han dynasty.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 27",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l mtn bn qtl w rʿy h- rḥbt",
+        "translation": "By Mtn son of Qtl and he pastured the raḥaba"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with several large, irregularly shaped rocks. The rocks appear to be part of a larger structure or monument, possibly an ancient stone carving or petroglyph. The surface is covered with a layer of dirt and small debris, indicating it has been exposed to the elements for some time. \n\nOn the stone surface, there are several lines of inscriptions or markings. These lines are faint and appear to be etched or carved into the stone. The lines are oriented in a somewhat random pattern, with some lines running horizontally and others running vertically. The inscriptions are relatively small in size, and the lines are not very clear, suggesting they may have been created using a tool or instrument rather than by hand.\n\nIn the lower left corner of the image, there is a small ruler or measuring stick placed on the stone surface. The ruler has a black and white checkered pattern and is marked with a scale of 10 cm. This ruler is likely used to provide a reference for measuring the length of the inscriptions on the stone.\n\nThe overall appearance of the stone surface suggests it has been exposed to the elements for a significant amount of time, possibly for thousands of years, given the weathering and erosion visible on the surface. The presence of inscriptions indicates that the stone may have been used for some purpose, such as marking a boundary, a monument, or a historical site.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are characterized by their stylized and often abstract nature.\n3. The characters are small and appear to be carved into the stone, with some lines running diagonally.\n4. The text is carved into the stone, with the lines running diagonally from top to bottom.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 28",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l ʿlyn bn ḥr<<>>b b{n} yġṯ bn yʿly f h rḍy ġnmt",
+        "translation": "By ʿlyn son of {Ḥrb} {son of} Yġṯ son of Yʿly and so O Rḍy [grant] booty"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a large, flat stone with inscriptions etched into its surface. The stone is situated in a sandy or gravelly environment, with some small rocks and debris scattered around. \n\nIn the center of the stone, there are several lines of inscriptions, which appear to be written in a cursive or script style. The inscriptions are relatively small and difficult to read, but some of the characters are discernible. \n\nA checkered line ruler is placed on the stone, running horizontally across the middle of the stone. The ruler is used to measure the length of the inscriptions. The stone is relatively smooth and has a dark, almost black, color, indicating it may have been exposed to the elements or has been treated with a dark substance.\n\nThe background consists of more stones and a sandy ground, suggesting that the stone is part of a larger structure or site. The overall scene appears to be part of an archaeological or historical site, possibly a site of significance or interest due to the inscriptions on the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang dynasty.\n3. The characters are carved into the stone, with some characters being more clearly visible than others.\n4. The text is carved into the stone, with the characters etched into the surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the stone is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the translations and transliterations:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 29",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l hḏmt bn ʾḫ w ḍbʾ nhr",
+        "translation": "By Hḏmt son of ʾḫwḍ and he raided Nhr"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with inscriptions carved into it. The stone appears to be a piece of granite or a similar hard rock. The inscriptions are in a script that appears to be ancient, possibly in a language that is not immediately recognizable. The text is written in a rough, cursive style, with some characters appearing more faded or worn than others. The surface of the stone is rough and uneven, with small, scattered particles of dust or dirt visible.\n\nIn the lower right corner of the stone, there is a black and white checkered ruler with a scale marked in centimeters. The ruler is used to measure the length of the inscriptions on the stone. The ruler is placed on the stone surface, and the markings on the ruler are clearly visible, indicating the length of the inscriptions.\n\nThe background of the image shows other parts of the stone, which appear to be part of the same structure or monument. The surrounding stones are also rough and uneven, with some areas showing signs of weathering or erosion. The overall condition of the stone suggests it has been exposed to the elements for a long time, leading to the wear and tear visible on the surface.\n\nThe inscriptions on the stone are the main focus of the image, and they provide insight into the historical or cultural significance of the site. The presence of the ruler suggests that the stone is being studied or measured, possibly for archaeological or historical purposes.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible in the image.\n2. The writing appears to be in a script that resembles Chinese characters, specifically the Simplified Chinese script.\n3. The characters are written in a cursive style, with some characters appearing to have multiple strokes or variations.\n4. The text is carved into the surface of a stone, with the carved lines visible and the characters clearly legible.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of characters, and it's challenging to transcribe accurately. Here's a rough transcription and some notes:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [damaged]\n\nUnfortunately, the inscription is not clear, and some characters might be damaged or unclear. Here's a rough transcription:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [damaged]\n\nThe inscription appears to be a mix of Safaitic and other scripts, and it's difficult to transcribe accurately.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 30",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l ʾlht",
+        "translation": "By ʾlht"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a large, flat stone with a checkered line ruler placed on it. The stone appears to be part of a larger rock formation or structure. The surface of the stone is rough and uneven, with some areas showing wear or damage. There are several small, scattered stones around the stone, and the ground around it is covered with dirt and small rocks.\n\nOn the stone, there are two sets of inscriptions or markings. The first set of inscriptions consists of two lines of text, both written in a cursive style. The first line reads \"K11,\" and the second line reads \"K11.\" The text appears to be carved into the stone, with the letters etched into the surface. The surface of the stone is slightly worn, and there are some small, scattered debris or dirt particles around the stone.\n\nThe checkered line ruler placed on the stone is used for measuring purposes, likely to ensure the accuracy of the inscriptions. The ruler consists of a horizontal line and a vertical line, and it is placed on the stone to provide a reference for the measurements.\n\nOverall, the image depicts a stone with inscriptions, possibly from an archaeological or historical context, and a checkered line ruler for measurement.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles Chinese characters, although the exact script cannot be determined from the image alone.\n2. The writing system or script appears to be Chinese.\n3. The characters are white and appear to be carved into the stone.\n4. The text is carved into the stone, not painted or written in any other way.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the stone is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nTransliteration:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 31",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l ys¹mʿl bn b----t bn ʾ{ṭ}----",
+        "translation": "By Ys¹mʿl son of B----t son of {ʾṭ----}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with a large, irregularly shaped rock prominently displayed. The rock has a rough, textured surface with visible cracks and indentations. On the rock, there are two sets of inscriptions or markings. The first set of inscriptions consists of two vertical lines, and the second set appears to be a series of horizontal lines or strokes. These markings are in a dark color, contrasting with the lighter stone background.\n\nIn the upper left corner of the image, there is a small, horizontal ruler or measuring tool placed on the rock. The ruler has a black and white checkered pattern and is labeled with the measurement \"20 cm.\" The ruler is positioned on the rock surface, suggesting it may have been used for measuring or marking the stone.\n\nThe background of the image consists of other rocks, some of which appear to be part of the same structure or formation. The rocks have a similar texture and color, indicating they are part of the same geological formation.\n\nThe overall scene suggests an archaeological or historical context, possibly indicating the presence of ancient inscriptions or markings on the rock surface. The ruler provides a sense of scale, indicating the size of the inscriptions relative to the rock's dimensions.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, although the exact script cannot be determined from the image.\n3. The characters are black and appear to be carved into the stone.\n4. The text is carved into the stone, with the characters etched into the surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Latin characters. Here's the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\n### Safaitic Transliteration:\n- 'b' -> [b]\n- 'g' -> [g]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [w]\n- 'z' -> [z]\n- 'ğ' -> [ğ]\n- 'd' -> [d]\n- 'h' -> [h]\n- 'w' -> [",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 32",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l yʿly bn ḥrb w wgm ʿl- ḥbb f ḥbb",
+        "translation": "By Yʿly son of ḥrb and he grieved for friend after friend"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, flat stone with inscriptions carved into its surface. The stone is grayish-blue and appears to be part of a larger rock formation or pile of stones. The inscriptions are in a script that resembles ancient writing, possibly in a language that uses a combination of symbols and letters. The text is inscribed in a manner that suggests it was carved by hand, likely thousands of years ago.\n\nA checkered line ruler is placed on the stone, indicating the stone's size or measurement. The background consists of scattered rocks and gravel, suggesting the stone is part of a natural, possibly arid, environment. The overall scene suggests an archaeological or historical context, possibly indicating an ancient site or a place of significance in history.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters resembling the shape of the Egyptian hieroglyphs.\n3. The characters are carved into the stone, with a clear and distinct outline.\n4. The text is carved into the stone, with no visible paint or other markings.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 33",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l ms²kr bn ʾs¹ bn s¹dqʾ",
+        "translation": "By Ms²kr son of ʾs¹ son of S¹dqʾ"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with several large, irregularly shaped rocks. The rocks are predominantly gray and appear to be part of a larger structure or monument. The surface is covered with a mix of dirt and small stones, indicating it has been exposed to the elements for some time.\n\nIn the center of the image, there is a small, horizontal line of writing on one of the rocks. The writing appears to be in a cursive style, with some characters being more prominent than others. The writing is relatively clear, but the details are not very legible due to the angle and lighting.\n\nTo the right of the writing, there is a horizontal line of white and black checkered marks, which could be a marker or a part of the writing itself. The checkered pattern is relatively small and does not obstruct the writing.\n\nThe overall scene suggests that the stone surface is part of an archaeological site, possibly a rock art site or a historical monument, given the presence of the writing and the context of the stones. The presence of the writing indicates that the site may have cultural or historical significance.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are typically carved on stone.\n3. The characters are small and appear to be inscribed in a linear style, with some characters being more prominent than others.\n4. The text is carved into the surface of the stone, with the characters clearly visible and legible.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the translations and transliterations:\n\n1. Identify visible characters\n   - l: ˈl\n   - b: ˈb\n   - g: ˈɡ\n   - d: ˈd\n   - h: ˈh\n   - w: ˈw\n   - z: ˈz\n   - ḥ: ˈh\n   - ṭ: ˈt\n   - y: ˈy\n   - k: ˈk\n   - l: ˈl\n   - m: ˈm\n   - n: ˈn\n   - s: ˈs\n   - ʿ: ˈuː\n   - f: ˈf\n   - ṣ: ˈs\n   - q: ˈk\n   - r: ˈr\n   - t: ˈt\n   - ṯ: ˈr\n   - ḫ: ˈh\n   - ḏ: ˈd\n   - ḍ: ˈd\n   - ġ: ˈg\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n   - ː\n",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 34",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l ---- bn ---- w wgm",
+        "translation": "By ---- son of ---- and he grieved"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with several large, irregularly shaped rocks. The rocks are predominantly gray and appear to be part of a larger structure or monument. The surface is covered with a mix of dirt and small stones, indicating it has been exposed to the elements for some time.\n\nIn the center of the image, there is a small, horizontal line of writing on one of the rocks. The writing is in a cursive style and appears to be inscribed in a dark, possibly reddish-brown substance. The writing is relatively clear, although some parts of the text are slightly faded or obscured by the surrounding rocks.\n\nTo the right of the writing, there is a horizontal line of white and black checkered markings, which could be a marker or a part of a survey or measurement tool. The checkered pattern is relatively small and does not obstruct the writing.\n\nThe overall scene suggests that the stone surface is part of an archaeological site or a historical monument, possibly featuring inscriptions or markings related to the site's history or significance. The presence of the writing and the checkered line indicates that the area has been studied or documented, possibly for historical or archaeological purposes.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters resembling the shape of the Egyptian hieroglyphs.\n3. The characters are carved into the stone, with a checkered line marking the edge of the stone.\n4. The text is carved into the stone, with the characters etched into the surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 35",
+      "num_images": 6,
+      "ground_truth": {
+        "transliteration": "l mr {b}n ʾs¹d bn ʿmrn bn lqf bn s¹ʾ{t} h- frs¹ w h rḍy lʿn m {ʿ}wr {h-} ḫṭṭ",
+        "translation": "By Mr {son of} ʾs¹d son of ʿmrn son of Lqf son of {S¹ʾt} is [the drawing of] the horseman and O Rḍy curse whoever scratches out the carving"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a stone surface with several large, flat stones arranged in a circular pattern. The stones are grey and appear to be part of a larger structure or monument. The surface is covered with a layer of dirt and small stones, indicating that the area may have been recently excavated or is in a natural state.\n\nIn the center of the image, there is a large, flat stone with a series of etched or carved designs. These designs appear to be linear or curvilinear patterns, possibly representing human figures or abstract shapes. The etching is relatively clear, suggesting that the stone was relatively well-preserved or that the etching was done with a tool that was not too harsh.\n\nTo the right of the stone with the etched design, there is a small, flat stone with a similar texture and color. The surface around these stones is also covered with dirt and small stones, indicating that the area is in a natural or semi-natural state.\n\nIn the upper left corner of the image, there is a horizontal line of white and blue markings, which could be a part of a ruler or a marker used for measuring or marking the stones. The ruler is placed on the surface, suggesting that the stones were recently measured or marked for some purpose, such as surveying or archaeological recording.\n\nOverall, the image depicts a well-preserved archaeological site with large, flat stones arranged in a circular pattern, and the presence of etched designs on one of the stones suggests that the area may have historical or cultural significance.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou dynasties.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's a transliteration of the visible characters:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe visible characters are:\n- b (by)\n- g (of)\n- d (of)\n- h (of)\n- w (of)\n- z (of)\n- ḥ (of)\n- ṭ (of)\n- y (of)\n- k (of)\n- l (of)\n- m (of)\n- n (of)\n- s (of)\n- ʿ (of)\n- f (of)\n- ṣ (of)\n- q (of)\n- r (of)\n- t (of)\n- ṭ (of)\n- ḫ (of)\n- ḏ (of)\n- ḍ (of)\n- ġ (of)\n\nThe Latin transliteration is:\n- b\n- g\n- d\n- h\n- w\n- z\n- ḥ\n- ṭ\n- y\n- k\n- l\n- m\n- n\n- s\n- ʿ\n- f\n- ṣ\n- q\n- r\n- t\n- ṭ\n- ḫ\n- ḏ\n- ḍ\n- ġ\n\nThe uncertain readings are:\n- ṭ (of)\n- ḫ (of)\n- ḏ (of)\n- ḍ (of)\n- ġ (of)\n\nThe damaged portions are:\n- The top right corner is damaged.\n- The bottom right corner is damaged.\n- The bottom left corner is damaged.\n\nThe inscription is likely a Safaitic name or title, but without more context, it's difficult to determine the exact meaning.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 36",
+      "num_images": 6,
+      "ground_truth": {
+        "transliteration": "l wqf bn frq --",
+        "translation": "By Wqf son of Frq"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, dark-colored rock with petroglyphs etched into its surface. The rock is surrounded by other rocks, and there is a black and white checkered line ruler placed on top of the rock, likely used for measuring or indicating the size of the petroglyphs. The petroglyphs appear to be a series of horizontal lines, possibly representing a stylized representation of a human figure or a symbol. The rock is situated in a natural outdoor setting, possibly a desert or arid region, given the rocky and sandy surroundings.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs.\n2. The writing system or script appears to be Egyptian hieroglyphs.\n3. The characters are carved into the stone, with a clear distinction between the lines and spaces.\n4. The text is carved into the stone, with the lines and spaces clearly visible.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription on the rock is:\n\n```\nl m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere's the transliteration in a more readable format:\n\n```\nl m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nThe Safaitic characters are:\n- `l` (lower case)\n- `m` (lower case)\n- `n` (lower case)\n- `s` (lower case)\n- `t` (lower case)\n- `q` (lower case)\n- `r` (lower case)\n- `t` (lower case)\n- `h` (lower case)\n- `d` (lower case)\n- `k` (lower case)\n- `l` (lower case)\n- `m` (lower case)\n- `n` (lower case)\n- `s` (lower case)\n- `t` (lower case)\n- `q` (lower case)\n- `r` (lower case)\n- `t` (lower case)\n- `h` (lower case)\n- `d` (lower case)\n- `k` (lower case)\n- `l` (lower case)\n- `m` (lower case)\n- `n` (lower case)\n- `s` (lower case)\n- `t` (lower case)\n- `q` (lower case)\n- `r` (lower case)\n- `t` (lower case)\n- `h` (lower case)\n- `d` (lower case)\n- `k` (lower case)\n- `l` (lower case)\n- `m` (lower case)\n- `n` (lower case)\n- `s` (lower case)\n- `t` (lower case)\n- `q` (lower case)\n- `r` (lower case)\n- `t` (lower case)\n- `h` (lower case)\n- `d` (lower case)\n- `k`",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 37",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l f{d}y ----h bn {ġ}ṯ h- gml",
+        "translation": "By {Fdy} ----h son of {Ġṯ} is the male camel"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, flat stone with a rough, uneven surface. The stone appears to be made of a dark-colored material, possibly stone or a similar material, and is covered in small, scattered debris, including dust and possibly some small stones or debris. The stone is positioned on a rough, uneven surface, likely part of a larger rock formation or a natural outcrop.\n\nIn the center of the stone, there are several lines of inscriptions or markings. These inscriptions are written in what appears to be a cursive or script style, with some characters appearing to be more prominent than others. The inscriptions are relatively small and scattered across the surface, with some lines running horizontally and others vertically. The overall appearance of the stone suggests it may have historical or cultural significance, possibly indicating it was used for ceremonial or religious purposes in the past.\n\nTo the right of the stone, there is a white and black checkered flag or marker, which appears to be part of a survey or archaeological project. The flag is positioned on the stone's surface, indicating it may have been used for marking or identification purposes during the excavation or study of the stone.\n\nThe stone's surface shows signs of wear and weathering, with some areas appearing more worn than others, suggesting it has been exposed to the elements for a significant amount of time. The overall condition of the stone and the presence of inscriptions suggest it may hold historical or cultural importance, possibly indicating it was used for ceremonial or religious purposes in the past.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible in the image. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its cursive and flowing style.\n2. The writing system or script appears to be hieratic, a style of writing used in ancient Egypt.\n3. The characters in the image are small and cursive, with some characters appearing to be connected to others, which is typical of hieratic writing.\n4. The text is carved into the stone, which is a common method for inscribing text on stone in ancient times.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [!]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 38",
+      "num_images": 10,
+      "ground_truth": {
+        "transliteration": "l tlm ----",
+        "translation": "By Tlm----"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone slab. The stone has a rough texture and is covered in small, scattered debris, indicating it has been exposed to the elements for a long time. The surface of the stone is uneven, with some areas appearing darker and others lighter, possibly due to the natural weathering process.\n\nOn the upper portion of the stone, there is a carved image of a bird. The bird appears to be in mid-flight, with its wings spread wide and its body slightly arched. The carving is relatively detailed, with visible lines and curves that give the impression of movement and form. The bird is painted in a light color, contrasting with the darker stone background.\n\nIn the lower left corner of the stone, there is a section of inscriptions or markings. These inscriptions are written in a cursive style and appear to be inscribed in a language or script that is not immediately recognizable. The inscriptions are relatively small and scattered, with some parts of the text partially obscured by the bird carving.\n\nTo the right of the stone, there is a small, horizontal ruler with a black and white checkered pattern. The ruler is used to provide a sense of scale and perspective, indicating that the stone is relatively large in relation to the ruler.\n\nThe overall condition of the stone suggests it has been exposed to the elements for a significant amount of time, with the weathering process evident in the uneven surface and the presence of debris.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its cursive and flowing style.\n2. The writing system or script appears to be hieratic, a style of writing used in ancient Egypt.\n3. The characters in the image are cursive and flowing, with a mix of small and large letters. The writing is relatively intricate, suggesting it was created by a skilled scribe.\n4. The text is carved into the stone, indicating that it was once part of a larger piece of stone or rock. The surface of the stone is rough and uneven, with visible cracks and scratches, which is typical of ancient rock carvings.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more structured format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [!]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 39",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l ylm bn ḥrb",
+        "translation": "By Ylm son of Ḥrb"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone slab. The stone has a rough texture and is covered in small, scattered debris, indicating it has been exposed to the elements for a long time. The surface of the stone is uneven, with some areas appearing darker and others lighter, likely due to the natural wear and tear of the stone.\n\nOn the stone, there is a carved image of a bird, which appears to be a representation of a bird. The bird is depicted in a stylized manner, with visible lines and curves that suggest movement and form. The bird's body is elongated, and its wings are spread out, giving it a dynamic and somewhat graceful appearance. The carving is relatively detailed, with visible lines and shading that give the bird a sense of depth and realism.\n\nIn the upper right corner of the stone, there is a small, rectangular marker with a black and white checkered pattern. This marker is likely a part of a survey or measurement tool used to indicate the location or dimensions of the stone. The marker is affixed to the stone with a small amount of adhesive or cement.\n\nThe overall condition of the stone suggests it has been exposed to the elements for a significant amount of time, with the weathering and wear patterns indicating it has been in this location for a long time. The carving on the stone is a notable feature, adding to the historical and cultural significance of the site.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters resembling the shape of birds.\n3. The characters are small and appear to be carved into the stone, with some lines etched deeply into the surface.\n4. The text is carved into the stone, with the carved lines visible and the characters clearly etched into the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]\n\nThe Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [.]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 40",
+      "num_images": 6,
+      "ground_truth": {
+        "transliteration": "l qs¹s¹t bn ḥl bn s¹mry w wgm ʿl- ḥbb",
+        "translation": "By Qs¹s¹t son of Ḥl son of S¹mry and he grieved for a friend"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, flat stone with a horizontal line of markings on its surface. The stone is grayish-blue in color and appears to be part of a larger rock formation or structure. The markings on the stone are in a script that appears to be ancient or historical, possibly in a language or script that is not immediately recognizable. The markings are relatively small and scattered across the surface, with some lines running vertically and others horizontally. \n\nA checkered line, likely a ruler or measuring tool, is placed across the top of the stone, indicating a measurement of 20 cm. The stone is surrounded by a mix of small rocks and gravel, suggesting it is part of a natural or semi-natural environment, possibly an archaeological site or a historical site.\n\nThe overall scene suggests an archaeological or historical context, where the stone might have been part of a larger structure or monument, and the markings could be part of inscriptions or inscriptions from a past civilization.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou dynasties.\n3. The characters are carved into the stone, with some characters being more prominent than others.\n4. The text is not carved but rather inscribed directly into the stone surface, with the characters appearing to be in a horizontal orientation.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the steps to transcribe it:\n\n1. **Visible Characters**:\n   - l\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. **Latin Transliteration**:\n   - l: ˈl\n   - b: ˈb\n   - g: ˈɡ\n   - d: ˈd\n   - h: ˈh\n   - w: ˈw\n   - z: ˈz\n   - ḥ: ˈh\n   - ṭ: ˈt\n   - y: ˈy\n   - k: ˈk\n   - l: ˈl\n   - m: ˈm\n   - n: ˈn\n   - s: ˈs\n   - ʿ: ˈuː\n   - f: ˈf\n   - ṣ: ˈs\n   - q: ˈk\n   - r: ˈr\n   - t: ˈt\n   - ṯ: ˈr\n   - ḫ: ˈh\n   - ḏ: ˈd\n   - ḍ: ˈd\n   - ġ: ˈg\n\n3. **Uncertain Readings**:\n   - The character \"l\" is not clearly visible, so it is marked with [?].\n\n4. **Damaged Portions**:\n   - The bottom right portion of the inscription is damaged, so it is marked with [?] to indicate it is not fully translatable.\n\nThe transcribed Safaitic inscription is:\n\n",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 41",
+      "num_images": 5,
+      "ground_truth": {
+        "transliteration": "l qmṭ bn drs¹ bn s¹mnt",
+        "translation": "By Qmṭ son of Drs¹ son of S¹mnt"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a stone surface with some inscriptions or markings. The stone appears to be weathered and has a rough texture, with visible cracks and scratches. The surface is covered with a thin layer of dust and small particles, indicating it has been exposed to the elements for some time.\n\nIn the center of the stone, there are several lines of inscriptions or markings. The text appears to be written in a cursive style, with some characters being more prominent than others. The markings are slightly faded, suggesting they may have been exposed to the elements or have been eroded over time.\n\nTo the right of the stone, there is a small, round object, possibly a piece of pottery or another stone artifact, resting on the ground. The object is partially covered by the stone and is partially obscured by the surrounding dirt and debris.\n\nA checkered ruler is placed horizontally on the stone, with the scale markings indicating the stone is approximately 10 cm (3.94 inches) in length. The ruler provides a reference for measuring the stone's length.\n\nThe overall scene suggests an archaeological or historical context, possibly indicating the presence of ancient inscriptions or markings on the stone surface. The presence of the ruler suggests the stone is being measured, which could be for historical or scientific purposes.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles cuneiform, which is a system of writing used in ancient Mesopotamia.\n2. The writing system appears to be cuneiform.\n3. The characters are small and appear to be written in a cursive style, with some characters being more prominent than others.\n4. The text is carved into the surface of a stone, likely from an ancient artifact or artifact.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the steps to transcribe it:\n\n1. **Visible Characters**:\n   - l\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. **Latin Transliteration**:\n   - l: L\n   - b: B\n   - g: G\n   - d: D\n   - h: H\n   - w: W\n   - z: Z\n   - ḥ: H\n   - ṭ: R\n   - y: Y\n   - k: K\n   - l: L\n   - m: M\n   - n: N\n   - s: S\n   - ʿ: F\n   - f: F\n   - ṣ: S\n   - q: Q\n   - r: R\n   - t: T\n   - ṯ: T\n   - ḫ: H\n   - ḏ: D\n   - ḍ: D\n   - ġ: G\n\n3. **Marking Uncertain Readings**:\n   - The inscription is written in Safaitic script, which is a writing system used in the Sahara region of North Africa. The characters are not clearly visible, and there are some areas where the writing is damaged or faded. Therefore, the characters are marked with '?' to indicate uncertainty.\n\n4. **Damaged Portions**:\n   - The inscription is partially visible, and there are areas where the writing is damaged or faded. The damaged portions are indicated with '？」 to show the damage.\n\nThe Safaitic inscription you provided is a fragment, and the transcribed characters are",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 42",
+      "num_images": 9,
+      "ground_truth": {
+        "transliteration": "l khl bn nhbt bn ʾn{ʿ}m",
+        "translation": "By Khl son of Nhbt son of {ʾnʿm}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large rock with engraved text. The rock appears to be made of a dark, possibly sedimentary, stone. The surface of the rock is cracked and uneven, with some areas showing more wear and erosion. The engraved text is in a script that resembles ancient Chinese characters, with some characters appearing to be in a stylized or carved manner. The text is inscribed in a manner that suggests it was carved into the rock, possibly by hand, rather than by tools.\n\nThe rock is surrounded by other rocks, and the ground is covered with small, scattered stones and gravel. The lighting in the image suggests it was taken during the daytime, as there are shadows cast on the rock and the surrounding area. The shadows are elongated and cast from the top left corner of the image, indicating the sun was positioned in that direction.\n\nThere is a small, thin object, possibly a marker or tool, inserted into the crack in the rock. The marker is white with some markings, possibly indicating a measurement or marking point. The overall scene suggests a historical or archaeological context, possibly related to ancient Chinese culture or history.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou dynasties.\n3. The characters are carved into the stone, with some having intricate designs or patterns.\n4. The text is carved into the stone, with the characters etched into the surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L (by/of)\n   - Name (unknown)\n\n2. Provide Latin transliteration:\n   - L (by/of) -> \"l\"\n   - Name -> \"name\"\n\n3. Mark uncertain readings with [?]:\n   - L (by/of) -> [?] \n   - Name -> [?] \n\n4. Note damaged portions:\n   - The inscription is partially damaged, with some characters missing or faded.\n\nThe Safaitic inscription on the rock is:\n\n```\nl  name\n```\n\nThis is a partial inscription, with the name \"name\" being the most visible character.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 43",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l bny bn mnʿm bn ḫṭft",
+        "translation": "By Bny son of Mnʿm son of Ḫṭft"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone with inscriptions carved into its surface. The stone appears to be made of a dark, possibly volcanic rock, with visible cracks and natural patterns. The inscriptions are in a script that appears to be ancient, possibly in a language that is not immediately recognizable. The text is inscribed in a circular pattern, with some characters appearing more prominently than others. The stone is situated on a sandy or gravelly surface, and there is a small, vertical marker or stick placed near the inscription, likely used for measurement or orientation. The overall condition of the stone suggests it has been exposed to the elements for a long time, with some parts of the inscription showing wear and damage.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, with some characters resembling the Egyptian hieratic script.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [!]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 44",
+      "num_images": 10,
+      "ground_truth": {
+        "transliteration": "l ʾḥs¹n bn ġlm",
+        "translation": "By ʾḥs¹n son of Ġlm"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, weathered stone with engraved text. The stone appears to be made of a dark, possibly volcanic rock, with visible cracks and natural patterns. The engraved text is in a script that resembles ancient writing, possibly from a language or script from a past civilization. The script is inscribed in a circular pattern around the stone, with some characters appearing more clearly than others. The stone is situated on a sandy or gravelly surface, and there is a small, vertical, black and white striped marker placed near the top right corner of the stone. The overall scene suggests an archaeological or historical context, possibly indicating the presence of ancient inscriptions or artifacts.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs.\n2. The writing system or script appears to be Egyptian hieroglyphs.\n3. The characters are carved in a rough, jagged style, with some characters appearing to have multiple lines or strokes.\n4. The text is carved into the surface of a large rock, which is weathered and cracked.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic script. Here's the transliteration in a more readable format:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]\n\nThe Safaitic inscription on the rock is:\n\n- \"l\" (by/of) + name\n- \"b\" (by/of) + name\n- \"g\" (by/of) + name\n- \"d\" (by/of) + name\n- \"h\" (by/of) + name\n- \"w\" (by/of) + name\n- \"z\" (by/of) + name\n- \"y\" (by/of) + name\n- \"k\" (by/of) + name\n- \"l\" (by/of) + name\n- \"m\" (by/of) + name\n- \"n\" (by/of) + name\n- \"s\" (by/of) + name\n- \"ʿ\" (by/of) + name\n- \"f\" (by/of) + name\n- \"ṣ\" (by/of) + name\n- \"q\" (by/of) + name\n- \"r\" (by/of) + name\n- \"t\" (by/of) + name\n- \"ḥ\" (by/of) + name\n- \"y\" (by/of) + name\n- \"k\" (by/of) + name\n- \"l\" (by/of) + name\n- \"m\" (by/of) + name\n- \"n\" (by/of) + name\n- \"s\" (by/of) + name\n- \"ʿ\" (by/of) + name\n- \"f\" (by/of) + name\n- \"ṣ\" (by/of) + name\n- \"q\" (by/of) + name\n- \"r\" (by/of) + name\n- \"t\" (by/of) + name\n- \"ḥ\" (by/of) + name\n- \"y\" (by/of) + name\n- \"k\" (by/of) + name\n- \"l\" (by/of) + name\n- \"m\" (by/of) + name\n- \"n\" (by/of) + name\n- \"s\" (by/of) + name\n-",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 45",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l mʿw{l} bn ḫlmt bn ḥrb",
+        "translation": "By {Mʿwl} son of Ḫlmt son of Ḥrb"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a large, weathered rock with engraved text. The rock appears to be made of a dark, possibly volcanic or sedimentary material, with visible cracks and natural patterns. The surface of the rock is covered with a layer of dust and small debris, indicating it has been exposed to the elements for a long time.\n\nThe engraved text is written in a script that appears to be ancient, possibly in a language that is no longer in use. The script is inscribed in a rough, cursive style, with some characters appearing more clearly than others. The text is scattered across the surface of the rock, with some characters more prominently visible than others. The cracks in the rock provide a natural frame for the inscriptions, adding to the rugged, ancient feel of the scene.\n\nIn the background, there are other rocks and debris, suggesting that the rock is part of a larger, possibly archaeological site or natural formation. The lighting in the image suggests that it was taken during the daytime, with shadows cast on the rock and the surrounding area, indicating the sun is high in the sky.\n\nOverall, the image depicts a piece of ancient rock art, possibly from a prehistoric or historical period, with the inscriptions providing insight into the culture or language of the time.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible. The writing appears to be in a script that resembles ancient Chinese characters, possibly from the Shang or Zhou dynasties.\n2. The writing system or script appears to be Chinese.\n3. The characters are carved into the surface of a large rock, with some of them appearing to be in a horizontal orientation.\n4. The text is carved into the rock, not painted or written in any other way.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 46",
+      "num_images": 8,
+      "ground_truth": {
+        "transliteration": "l wʿl bn ybnʾl",
+        "translation": "By Wʿl son of Ybnʾl"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up view of a large, weathered stone with engraved text. The stone appears to be made of a dark, possibly volcanic rock, and has several cracks and crevices, indicating it has been exposed to the elements for a long time. The engraved text is in a script that appears to be ancient, possibly in a language that is no longer in use. The writing is etched into the stone, with some parts of the text visible and others partially obscured by cracks and wear. The surface of the stone is rough and uneven, with small, scattered stones around it. The lighting in the image suggests it was taken during the daytime, with shadows cast on the stone and the surrounding ground.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Chinese characters, possibly from the Shang or Zhou periods.\n3. The characters are carved into the stone, with some characters appearing to be in a vertical orientation.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is in right-to-left script. Here is the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [!]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 47",
+      "num_images": 6,
+      "ground_truth": {
+        "transliteration": "l ḥrb bn ḥly bn ms¹k w s¹qm f ʿy f h s²ʿhqm ḥnn",
+        "translation": "By Ḥrb son of Ḥly son of Ms¹k and he was sick and so he was weary and so O S²ʿhqm [grant] favour."
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large, dark-colored stone with some inscriptions carved into it. The stone appears to be part of a larger structure or monument, possibly an ancient ruin or archaeological site. The inscriptions are in a script that resembles ancient Egyptian hieroglyphs, which are visible on the surface of the stone. The text is written in a linear style, with some characters appearing more clearly than others.\n\nA checkered line ruler is placed at the bottom of the image, indicating the measurement of the stone. The ruler shows a scale of 10 cm, suggesting that the stone is approximately 10 centimeters in length. The background of the image is a mix of light and shadow, with the light source coming from the top left, casting shadows on the stone and creating a contrast between light and dark areas. The surface of the stone is rough and uneven, with small, scattered particles and a few small indentations or cracks.\n\nThe inscriptions are written in a linear style, with some characters appearing more clearly than others. The text is relatively small, and the overall appearance of the inscriptions suggests they were carved by hand, possibly by an ancient scribe or artist. The presence of the ruler indicates that the stone is being measured, which might be for archaeological or historical purposes, such as dating or identifying the stone's origin.\n\nGiven the context, it is likely that the stone is part of a larger archaeological site, and the inscriptions could provide information about the historical or cultural significance of the site. The presence of ancient hieroglyphs suggests that the site may have been important in ancient Egyptian history, possibly serving as a temple, a burial site, or a place of worship.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible in the image. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its distinctive horizontal strokes.\n2. The writing system or script appears to be hieratic, a style of writing used in ancient Egypt.\n3. The characters in the image are small and appear to be carved into the stone. The writing is relatively clear, but some characters may be slightly blurred or difficult to read.\n4. The text is carved into the stone, which is a common method for inscribing ancient texts. The presence of a ruler or scale indicates that the text is being measured in centimeters, suggesting that the stone is likely part of a larger artifact or structure.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere are the steps to transcribe it:\n\n1. **Visible Characters**:\n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. **Latin Transliteration**:\n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n3. **Marking Uncertain Readings**:\n   - The characters \"l\" and \"b\" are not clearly visible, so they are marked with [?].\n\n4. **Damaged Portions**:\n   - The bottom right portion of the inscription is damaged, making it difficult to transcribe accurately. The damaged area is marked with [?].\n\n5. **Note on Damage**:\n   - The inscription is on a large rock, and the damage suggests it may have been exposed to environmental factors, such as rain or wind, which can cause damage to the inscription.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 48",
+      "num_images": 7,
+      "ground_truth": {
+        "transliteration": "l ns²dʾl bn bnẓʿn",
+        "translation": "By Ns²dʾl son of Bnẓʿn"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a close-up of a large stone slab with inscriptions carved into its surface. The stone appears to be weathered and has a rough texture, with some areas showing signs of wear and erosion. The inscriptions are in a cursive script, which is difficult to read due to the wear and the angle at which the stone is viewed. The text is white, contrasting with the dark gray color of the stone.\n\nIn the lower right corner of the stone, there is a small ruler or measuring tool, likely used for scale or reference. The ruler is black and white, with a grid pattern, and is placed on the stone slab to provide a sense of scale for the inscriptions.\n\nThe background consists of other large stones, some of which are also weathered and have inscriptions carved into them. The stones are arranged in a somewhat random pattern, and the ground around them is covered with small rocks and gravel, indicating a natural, possibly arid environment.\n\nThe overall scene suggests that the stone slab is part of a larger archaeological site or historical site, possibly containing inscriptions from an ancient civilization or culture. The presence of the ruler indicates that the stone is being studied or measured, suggesting that it may have historical or archaeological significance.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles Chinese characters, possibly from the Shang or Zhou dynasties.\n3. The characters are carved into the stone, with some characters appearing more clearly than others.\n4. The text is carved into the stone, with the characters etched into the surface of the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription you provided is a mix of Safaitic and Arabic characters. Here's the transliteration:\n\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions with [?]",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 49",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l tḥbb bn ʿbqn",
+        "translation": "By Tḥbb son of ʿbqn"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, weathered stone with inscriptions etched into its surface. The stone is grayish-brown in color and appears to be made of a hard, possibly stone-like material. The inscriptions are in a script that resembles ancient writing, possibly from a language or script that is no longer in use. The writing is somewhat faded and appears to be in a horizontal orientation, running from the top left to the bottom right of the stone.\n\nIn the center of the stone, there is a horizontal line of markings, which could be a ruler or a marker used for measuring or marking the stone. The ruler consists of a black and white checkered pattern, and it is placed on the stone, suggesting it might have been used for some purpose, such as marking the stone or indicating a specific measurement.\n\nThe stone is surrounded by other large rocks, which are also weathered and appear to be part of the same geological formation. The ground around the stone is covered with small, scattered rocks and debris, indicating that the area is likely in a desert or arid environment.\n\nThe overall scene suggests that the stone might be part of an archaeological site or a historical site, possibly containing inscriptions from an ancient civilization or a significant event in history. The presence of the ruler or marker indicates that the stone might have been used for some purpose, such as marking a specific point or indicating a measurement.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible on the stone.\n2. The writing appears to be in a script that resembles ancient Egyptian hieroglyphs, which are typically carved into stone.\n3. The characters are small and appear to be inscribed in a linear fashion, with some characters overlapping.\n4. The text is carved into the stone, with the characters etched into the surface.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the rock is:\n\n1. Identify visible characters: \n   - L\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṭ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. Provide Latin transliteration:\n   - L → L\n   - b → b\n   - g → g\n   - d → d\n   - h → h\n   - w → w\n   - z → z\n   - ḥ → ḥ\n   - ṭ → ṭ\n   - y → y\n   - k → k\n   - l → l\n   - m → m\n   - n → n\n   - s → s\n   - ʿ → ʿ\n   - f → f\n   - ṣ → ṣ\n   - q → q\n   - r → r\n   - t → t\n   - ṭ → ṭ\n   - ḫ → ḫ\n   - ḏ → ḏ\n   - ḍ → ḍ\n   - ġ → ġ\n\n3. Mark uncertain readings with [?]:\n   - ṭ → [?] (uncertain)\n   - ṫ → [?] (uncertain)\n   - ḏ → [?] (uncertain)\n   - ḍ → [?] (uncertain)\n\n4. Note damaged portions:\n   - The inscription is partially damaged, with some characters missing or faded.\n\nThe Safaitic inscription on the rock is:\n\nL b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 50",
+      "num_images": 4,
+      "ground_truth": {
+        "transliteration": "l hgml bn lb----t",
+        "translation": "By Hgml son of Lb----t"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": "The image shows a large, round stone with a carved inscription. The stone is grayish-brown and appears to be weathered, with some cracks and discoloration. The inscription is carved into the surface of the stone and is visible in a circular pattern. The text is written in a cursive style, and the characters are relatively small, suggesting the stone may have been used for inscriptions in the past.\n\nIn the foreground, there is a horizontal checkered line, likely a ruler or a marker, indicating the stone's size or position. The background consists of other large stones, some of which are also weathered and have visible cracks and discoloration. The ground around the stones is sandy and appears to be dry, with some small rocks scattered around.\n\nThe inscription on the stone is the most prominent feature, and it appears to be a significant piece of historical or cultural significance, possibly dating back to a past era. The presence of the ruler or marker suggests that the stone might have been used for inscriptions in the past, possibly by individuals or groups who left their marks on the stone.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": "1. Yes, there is text or inscription visible.\n2. The writing appears to be in a script that resembles ancient Egyptian hieratic script, which is characterized by its distinctive cursive style and use of horizontal lines.\n3. The characters are relatively small and appear to be carved into the stone.\n4. The text is carved into the stone, with the characters etched into the surface of the rock.",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": "The Safaitic inscription on the stone is:\n\n```\nl ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ\n```\n\nHere is the transliteration:\n\n1. Identify visible characters: \n   - l\n   - ʾ\n   - b\n   - g\n   - d\n   - h\n   - w\n   - z\n   - ḥ\n   - ṭ\n   - y\n   - k\n   - l\n   - m\n   - n\n   - s\n   - ʿ\n   - f\n   - ṣ\n   - q\n   - r\n   - t\n   - ṯ\n   - ḫ\n   - ḏ\n   - ḍ\n   - ġ\n\n2. Provide Latin transliteration:\n   - l: ˈl\n   - ʾ: ˈaː\n   - b: ˈb\n   - g: ˈɡ\n   - d: ˈd\n   - h: ˈh\n   - w: ˈw\n   - z: ˈz\n   - ḥ: ˈh\n   - ṭ: ˈr\n   - y: ˈiː\n   - k: ˈk\n   - l: ˈl\n   - m: ˈm\n   - n: ˈn\n   - s: ˈs\n   - ʿ: ˈuː\n   - f: ˈf\n   - ṣ: ˈs\n   - q: ˈk\n   - r: ˈr\n   - t: ˈt\n   - ṯ: ˈr\n   - ḫ: ˈh\n   - ḏ: ˈd\n   - ḍ: ˈd\n   - ġ: ˈg\n\n3. Mark uncertain readings with [?]:\n   - ṭ: ?\n   - ṭ: ?\n   - ṭ: ?\n   - ṭ: ?\n   - ṭ: ?\n   - ṭ: ?\n   - ṭ: ?\n   -",
+          "duration_seconds": 0,
+          "success": true,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

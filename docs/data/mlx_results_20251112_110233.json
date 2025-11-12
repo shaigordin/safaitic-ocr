@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "timestamp": "20251112_110233",
+    "model": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+    "backend": "mlx-vlm",
+    "num_inscriptions": 3,
+    "num_prompts": 3
+  },
+  "results": [
+    {
+      "inscription_siglum": "BES15 1",
+      "num_images": 15,
+      "ground_truth": {
+        "transliteration": "l ṯfl bn frʾ bn frd w qbr bny -h b h- mẓr",
+        "translation": "By Ṯfl son of Frʾ son of Frd and he buried his sons at the lookout point."
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 133872076800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 133872076800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 133872076800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 2",
+      "num_images": 1,
+      "ground_truth": {
+        "transliteration": "l kʿb bn wqs¹",
+        "translation": "By Kʿb son of Wqs¹"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        }
+      ]
+    },
+    {
+      "inscription_siglum": "BES15 3",
+      "num_images": 1,
+      "ground_truth": {
+        "transliteration": "l {h}{b} bn {b}{q} {b}{n} {w}d{s¹}",
+        "translation": "By {Hb} son of{ Bq} {son of} {Wqs¹}"
+      },
+      "prompts": [
+        {
+          "prompt_name": "description",
+          "prompt": "Describe what you see in this image in detail. \nFocus on any text, inscriptions, or writing visible on the stone surface.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "script_id",
+          "prompt": "Analyze this image carefully. \n\n1. Is there any text or inscription visible?\n2. If yes, what writing system or script does it appear to be?\n3. Describe the characteristics of the characters you see.\n4. Is the text carved, painted, or written in some other way?\n\nBe specific about what you observe.",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        },
+        {
+          "prompt_name": "transliteration",
+          "prompt": "Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of) + name.\n\nTransliterate this Safaitic inscription (right-to-left):\n1. Identify visible characters\n2. Provide Latin transliteration\n3. Mark uncertain readings with [?]\n4. Note damaged portions",
+          "response": null,
+          "duration_seconds": 0,
+          "success": false,
+          "error": "[metal::malloc] Attempting to allocate 120560140800 bytes which is greater than the maximum allowed buffer size of 62620631040 bytes."
+        }
+      ]
+    }
+  ]
+}

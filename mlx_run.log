@@ -1,0 +1,617 @@
+
+======================================================================
+LOADING MLX-VLM MODEL
+======================================================================
+Model: mlx-community/Qwen2.5-VL-7B-Instruct-4bit
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 40688.48it/s]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 13468.46it/s]
+✓ Model loaded successfully
+
+======================================================================
+LOADING INSCRIPTION DATA
+======================================================================
+Loaded 3753 records from metadata/BES15.csv
+Unique inscriptions: 1401
+✓ Found 1401 inscriptions with images
+  Processing first 20
+
+======================================================================
+ANALYZING INSCRIPTIONS
+======================================================================
+
+[1/20]
+======================================================================
+Inscription: BES15 1
+Images: 15
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some faint, etched markings. The rock appears to be part of a larger collection of rocks, possibly i...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. There is an inscription visible on the rock.
+2. The writing system appears to be ancient or prehistoric, possibly belonging to a script used by ear...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To analyze the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to be a se...
+
+[2/20]
+======================================================================
+Inscription: BES15 2
+Images: 1
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a rock surface with some inscriptions or markings on it. The rock appears to be part of a larger collection of rocks, possibly in a na...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system or script appears to be a form of petroglyphs, which are ancient rock ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transcription and Translation
+
+1. **Identify Visible Characters:**
+   - The visible characters in the Safaitic inscription appear to ...
+
+[3/20]
+======================================================================
+Inscription: BES15 3
+Images: 1
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some inscriptions or markings on it. The rock appears to be part of a larger collection of rocks, po...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be a form of petroglyphs, which are ancient rock...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transcription and Translation
+
+1. **Identify Visible Characters:**
+   - The visible characters in the Safaitic inscription appear to ...
+
+[4/20]
+======================================================================
+Inscription: BES15 4
+Images: 2
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some inscriptions or markings etched into it. The rock appears to be dark in color, possibly a type ...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or historical, possibly belonging to ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To transliterate the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The visible characters appea...
+
+[5/20]
+======================================================================
+Inscription: BES15 5
+Images: 1
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a large, dark-colored stone with a rough texture. The stone appears to be part of a larger structure, possibly a piece o...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be a form of ancient or historical script, possi...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: 1. **Identify visible characters:**
+   - The visible characters in the Safaitic inscription appear to be: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ...
+
+[6/20]
+======================================================================
+Inscription: BES15 6
+Images: 6
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some inscriptions or markings on it. The rock appears to be weathered and has a rough texture. There...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system or script appears to be ancient or prehistoric, possibly belonging to ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Analysis of the Safaitic Inscription
+
+1. **Identify Visible Characters:**
+   - The visible characters in the inscription appear to be...
+
+[7/20]
+======================================================================
+Inscription: BES15 7
+Images: 10
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with visible petroglyphs, which are ancient rock carvings. The rock surface appears to be part of a ...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or prehistoric, possibly petroglyphs ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To transliterate the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to b...
+
+[8/20]
+======================================================================
+Inscription: BES15 8
+Images: 8
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with visible petroglyphs, which are ancient rock carvings. The rock surface appears to be part of a ...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or prehistoric, possibly petroglyphs ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To transliterate the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to b...
+
+[9/20]
+======================================================================
+Inscription: BES15 9
+Images: 8
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with petroglyphs, which are ancient rock carvings. The rock surface appears to be part of a larger r...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or prehistoric, possibly belonging to...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To transliterate the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to b...
+
+[10/20]
+======================================================================
+Inscription: BES15 10
+Images: 3
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with visible petroglyphs, which are ancient rock carvings. The rock surface appears to be part of a ...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or prehistoric, possibly petroglyphs ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Analysis of the Safaitic Inscription
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, whic...
+
+[11/20]
+======================================================================
+Inscription: BES15 11
+Images: 3
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a large rock with a series of inscriptions or markings on its surface. The rock appears to be part of a larger collection of rocks, so...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be a form of ancient or historical script, possi...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Analysis:
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script.
+   - The visible characters are...
+
+[12/20]
+======================================================================
+Inscription: BES15 12
+Images: 5
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a large rock with inscriptions carved into its surface. The inscriptions appear to be in a script that resembles ancient or historical...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system appears to be ancient or historical, possibly belonging to a script fr...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transcription and Translation
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, which is an...
+
+[13/20]
+======================================================================
+Inscription: BES15 13
+Images: 7
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a large rock with inscriptions carved into its surface. The rock appears to be part of a larger collection of rocks, som...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system appears to be ancient or historical, possibly belonging to a script fr...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transcription and Translation
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, which is an...
+
+[14/20]
+======================================================================
+Inscription: BES15 14
+Images: 4
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a large rock with inscriptions carved into its surface. The inscriptions appear to be in a script that resembles ancient or historical...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system appears to be ancient or historical, possibly belonging to a script us...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transcription and Translation
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, which is an...
+
+[15/20]
+======================================================================
+Inscription: BES15 15
+Images: 4
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a large rock with some inscriptions or markings on its surface. The rock appears to be part of a larger collection ...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system or script appears to be ancient or prehistoric, possibly belonging to ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To analyze the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to be on a...
+
+[16/20]
+======================================================================
+Inscription: BES15 16
+Images: 3
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a large, flat stone with a series of petroglyphs carved into its surface. The stone is placed on a ground covered with small rocks and...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. There is no visible text or inscription in the image. The image shows a rock with some engravings or carvings, but no discernible text.
+
+2. The ima...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: To transliterate the Safaitic inscription in the image, let's follow the steps:
+
+1. **Identify visible characters:**
+   - The inscription appears to b...
+
+[17/20]
+======================================================================
+Inscription: BES15 17
+Images: 3
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some inscriptions or markings on it. The rock appears to be part of a larger collection of rocks, so...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible on the rock.
+2. The writing system or script appears to be Arabic.
+3. The characters are inscribed on the...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Analysis of the Safaitic Inscription
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, whic...
+
+[18/20]
+======================================================================
+Inscription: BES15 18
+Images: 5
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with inscriptions carved into it. The rock appears to be part of a larger rock formation, possibly a...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or historical, possibly belonging to ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Transliteration of the Safaitic Inscription
+
+1. **Identify Visible Characters:**
+   - The visible characters in the inscription appea...
+
+[19/20]
+======================================================================
+Inscription: BES15 19
+Images: 5
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up view of a rock surface with some inscriptions or markings on it. The rock appears to be part of a larger collection of rock...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient or prehistoric, possibly petroglyphs ...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✗ Failed: 'utf-8' codec can't decode bytes in position 1-2: unexpected end of data
+
+[20/20]
+======================================================================
+Inscription: BES15 20
+Images: 8
+======================================================================
+
+  Prompt: description
+    Describe what you see in this image in detail. 
+Focus on any text, inscriptions, or writing visible ...
+    ✓ Success (0.0s)
+    Response: The image shows a close-up of a rock surface with some inscriptions or carvings. The rock appears to be part of a larger archaeological site, as indic...
+
+  Prompt: script_id
+    Analyze this image carefully. 
+
+1. Is there any text or inscription visible?
+2. If yes, what writing...
+    ✓ Success (0.0s)
+    Response: 1. Yes, there is text or inscription visible in the image.
+2. The writing system or script appears to be ancient, possibly belonging to a language fro...
+
+  Prompt: transliteration
+    Safaitic letters: ʾ b g d h w z ḥ ṭ y k l m n s ʿ f ṣ q r t ṯ ḫ ḏ ḍ ġ. Often starts with 'l' (by/of)...
+    ✓ Success (0.0s)
+    Response: ### Step-by-Step Analysis of the Safaitic Inscription
+
+1. **Identify Visible Characters:**
+   - The inscription appears to be in Safaitic script, whic...
+
+======================================================================
+SAVING RESULTS
+======================================================================
+✓ Saved detailed results: docs/data/mlx_results_20251112_111956.json
+✓ Saved latest results: docs/data/latest.json
+
+======================================================================
+SUMMARY
+======================================================================
+Total processed: 20
+Successful: 19
+Failed: 1
+Success rate: 95.0%
+
+Next steps:
+  1. Review results in docs/data/latest.json
+  2. Open docs/index.html to view web application
+  3. Deploy to GitHub Pages (git push)

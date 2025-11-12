@@ -1,197 +1,383 @@
-# Safaitic OCR - VLM Testing Pipeline
+# Safaitic OCR - VLM Evaluation for Ancient Inscriptions
 
-A comprehensive pipeline for testing Vision Language Models (VLMs) on ancient Safaitic inscriptions. Features **FREE VLM inference** via HuggingFace Gradio Spaces and a web application for viewing results.
+**Preliminary research demonstrating Vision Language Model capabilities on Safaitic inscriptions** - a crucial first step toward developing grounded OCR for digital scholarly editions of ancient Arabian scripts.
 
-## Overview
+## 🎯 Project Goals
 
-This toolkit enables researchers to:
-- Test VLM performance on script recognition, transliteration, and translation using **FREE** Gradio Spaces
-- Compare model outputs against scholarly ground truth from OCIANA database
-- Run systematic batch evaluations across multiple inscriptions
-- View results in an interactive web application
-- Collaborate with non-coding scholars through Jupyter notebooks
+This project evaluates **state-of-the-art VLMs** on Safaitic inscriptions to:
 
-## Features
+1. **Demonstrate current capabilities** of general-purpose VLMs on specialized ancient scripts
+2. **Identify limitations** requiring fine-tuned grounded OCR approaches
+3. **Establish baseline metrics** for future fine-tuning and dataset creation
+4. **Show research potential** for AI-assisted digital scholarly editions
 
-- **FREE VLM Inference**: Uses HuggingFace Gradio Spaces (no API keys, no costs)
-- **Multiple VLM Options**: LLaVA OneVision, Qwen3-VL, or local Ollama models
-- **Web Application**: Beautiful results viewer deployed on GitHub Pages
-- **Modular Architecture**: Reusable Python modules for VLM interfaces and evaluation
-- **Batch Processing**: Systematic evaluation across inscription datasets
-- **Ground Truth Comparison**: Scholarly transliterations and translations from OCIANA
+### About Safaitic
 
-## Project Structure
+Safaitic is an ancient Arabian script used by nomads in modern-day Syria, Jordan, and Saudi Arabia (1st century BC - 4th century AD). Key challenges:
+- **28 consonantal glyphs** - no vowels written
+- **No word division** - continuous text carved in any direction
+- **Rocky surfaces** - weathered, low-contrast inscriptions
+- **Complex paleography** - 4+ script variants with experimental forms
+
+Learn more: [OCIANA Safaitic Database](https://ociana.osu.edu/scripts_safaitic)
+
+## 🚀 Three Approaches to VLM Analysis
+
+### 1. **Local Mac Inference** (MLX-VLM) - *Recommended for Development*
+
+Fast, private inference using Apple Silicon with [mlx-vlm](https://github.com/Blaizzy/mlx-vlm):
+
+```bash
+# Install MLX-VLM
+pip install mlx-vlm
+
+# Analyze inscriptions locally
+python analyze_mlx.py --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit --count 10
+```
+
+**Advantages**: Free, private, fast on Mac, supports 200+ models
+**Models**: Qwen2.5-VL (2B-72B), SmolVLM (256M-2B), Idefics3, Pixtral, Moondream
+
+### 2. **Serverless Batch Processing** (HF Jobs + UV Scripts) - *Best for Scale*
+
+Process all 1,401 inscriptions with zero GPU costs using [uv-scripts/ocr](https://huggingface.co/datasets/uv-scripts/ocr):
+
+```bash
+# Batch OCR on HuggingFace Jobs (no local GPU needed)
+hf jobs uv run --flavor a100-large \
+  https://huggingface.co/datasets/uv-scripts/ocr/raw/main/deepseek-ocr-vllm.py \
+  shaigordin/safaitic-inscriptions \
+  shaigordin/safaitic-ocr-results \
+  --max-samples 1401
+```
+
+**Advantages**: Scalable, cost-effective, production OCR models
+**Models**: DeepSeek-OCR (3B), Nanonets-OCR2 (3.7B), olmOCR2 (8B), RolmOCR (7B)
+
+### 3. **Local Ollama** - *Fallback Option*
+
+Local server with vision models:
+
+```bash
+ollama pull llama3.2-vision
+python generate_results.py --count 50
+```
+
+**Advantages**: Fully local, no cloud dependency
+**Limitations**: Frequent timeouts (300s), 44% success rate in testing
+
+## 📊 Current Results
+
+We've tested with **mlx-vlm (Qwen2.5-VL)** and **Ollama (llama3.2-vision)** on small samples:
+- ✅ **Script identification**: Recognizes "ancient inscriptions", "rock surface", "text"
+- ⚠️ **Transliteration**: Cannot read Safaitic letters (expected - not in training data)
+- ⚠️ **Complex prompts**: Timeouts on detailed transliteration requests
+- 📈 **Success rate**: ~60-100% depending on prompt complexity and model
+
+**Key Finding**: General VLMs understand *context* (ancient, rock-carved) but lack *script knowledge* → **Fine-tuning required**
+
+## 📁 Project Structure
 
 ```
 safaitic-ocr/
 ├── data/
-│   └── examples/           # Inscription images organized by siglum
+│   └── examples/           # 1,401 inscriptions with images (BES15 corpus)
 ├── metadata/
-│   └── BES15.csv          # Ground truth transliterations and translations
+│   └── BES15.csv          # Ground truth from OCIANA database
 ├── src/
-│   ├── __init__.py
-│   ├── utils.py           # Data loading and image processing
-│   ├── vlm_interface.py   # Llama 3.2 Vision API wrapper
-│   ├── prompt_templates.py # Safaitic-specific prompts
+│   ├── utils.py           # Data loading utilities
+│   ├── vlm_interface.py   # Ollama interface (legacy)
+│   ├── mlx_vlm_interface.py    # NEW: MLX-VLM interface
+│   ├── prompt_templates.py     # Safaitic-specific prompts
 │   └── evaluator.py       # Evaluation metrics
 ├── notebooks/
 │   ├── 01_setup_and_explore.ipynb
 │   ├── 02_single_image_test.ipynb
-│   └── 03_batch_evaluation.ipynb
-├── results/               # Evaluation outputs (created on first run)
-├── requirements.txt
-└── README.md
+│   ├── 03_batch_evaluation.ipynb
+│   └── 04_preliminary_results_analysis.ipynb  # NEW
+├── docs/
+│   ├── index.html         # Results visualization
+│   ├── data/latest.json   # Analysis results
+│   └── future_work.md     # NEW: Grounded OCR roadmap
+├── analyze_mlx.py         # NEW: MLX-VLM batch analysis
+├── uv_batch_analysis.py   # NEW: HF Jobs UV script
+├── generate_results.py    # Legacy Ollama script
+└── requirements.txt
 ```
 
-## Setup
+## 🏁 Quick Start
 
-### Prerequisites
+### Method 1: Local Mac Inference (MLX-VLM) - Recommended
 
-1. **Python 3.10+**
-2. **HuggingFace Gradio Client** (installed automatically)
+**Requirements**: Apple Silicon Mac (M1/M2/M3/M4)
 
-### Installation
-
-1. Clone the repository:
+1. Clone and setup:
 ```bash
 git clone https://github.com/shaigordin/safaitic-ocr.git
 cd safaitic-ocr
-```
-
-2. Create and activate a virtual environment:
-```bash
 python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-# or
-venv\Scripts\activate  # On Windows
-```
-
-3. Install dependencies:
-```bash
+source venv/bin/activate
 pip install -r requirements.txt
+pip install mlx-vlm
 ```
 
-That's it! No API keys, no additional setup required for FREE VLM inference.
+2. Run analysis:
+```bash
+# Analyze 10 inscriptions with Qwen2.5-VL (7B, 4-bit quantized)
+python analyze_mlx.py --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit --count 10 --verbose
 
-### Optional: Local Ollama Setup
+# Try SmolVLM (2B, very fast)
+python analyze_mlx.py --model mlx-community/SmolVLM-Instruct --count 10
 
-If you want to use local models instead of Gradio Spaces:
+# Analyze all inscriptions
+python analyze_mlx.py --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit --all
+```
+
+**Available Models** (200+ on HuggingFace):
+- `mlx-community/Qwen2.5-VL-7B-Instruct-4bit` (recommended, 4.5GB)
+- `mlx-community/SmolVLM-Instruct` (fastest, 1.2GB)
+- `mlx-community/Idefics3-8B-Llama3-4bit` (good, 4.8GB)
+- `mlx-community/pixtral-12b-4bit` (large, 7GB)
+
+Browse all: https://huggingface.co/mlx-community
+
+### Method 2: Serverless Batch (HF Jobs) - Best for Scale
+
+**Requirements**: HuggingFace account (free), HF CLI
+
+1. Setup HF CLI:
+```bash
+pip install huggingface_hub[cli,hf_transfer]
+huggingface-cli login  # Paste your HF token
+```
+
+2. Prepare your dataset:
+```bash
+# Upload inscription images to HuggingFace dataset
+# (or use existing dataset)
+```
+
+3. Run serverless batch OCR:
+```bash
+# Process with DeepSeek-OCR on A100 GPU
+hf jobs uv run --flavor a100-large \
+  https://raw.githubusercontent.com/shaigordin/safaitic-ocr/main/uv_batch_analysis.py \
+  shaigordin/safaitic-inscriptions \
+  shaigordin/safaitic-ocr-results \
+  --max-samples 1401
+
+# Or use Nanonets-OCR2 model
+hf jobs uv run --flavor a100-large \
+  https://huggingface.co/datasets/uv-scripts/ocr/raw/main/nanonets-ocr2-vllm.py \
+  shaigordin/safaitic-inscriptions \
+  shaigordin/safaitic-ocr-results
+```
+
+**Supported Flavors**:
+- `a100-large`: 1x A100 GPU (best performance)
+- `l4x4`: 4x L4 GPUs (cost-effective)
+- Check pricing: https://huggingface.co/docs/hub/jobs
+
+### Method 3: Local Ollama (Fallback)
+
+**Requirements**: Ollama installed
 
 1. Install Ollama from [ollama.ai](https://ollama.ai)
-2. Pull a vision model:
+
+2. Pull and run:
 ```bash
 ollama pull llama3.2-vision
+python generate_results.py --count 10
 ```
 
-## Quick Start
+**Note**: Ollama had 44% success rate in our tests (frequent timeouts). Use MLX-VLM for better results.
 
-### Generate VLM Analysis Results
+## 📖 Detailed Usage
 
-Run batch analysis using FREE Gradio Spaces:
+### MLX-VLM: Command-Line Options
 
 ```bash
-# Test mode: Analyze 10 inscriptions
-python generate_results.py
+python analyze_mlx.py \
+  --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit \
+  --count 10 \              # Number of inscriptions to analyze
+  --all \                   # Or analyze all inscriptions
+  --verbose                 # Show detailed progress
 
-# Analyze all inscriptions with images
-python generate_results.py --all
-
-# Analyze specific number
-python generate_results.py --count 50
+# Results saved to: docs/data/mlx_results_YYYYMMDD_HHMMSS.json
 ```
 
-This will:
-1. Connect to HuggingFace Gradio Space (LLaVA OneVision by default)
-2. Analyze inscriptions with multiple prompts
-3. Save results to `docs/data/latest.json`
-4. Display progress and summary
-
-### View Results
-
-Open the web application:
+### UV Scripts: Batch Processing
 
 ```bash
-# Open in your browser
+# Basic usage
+hf jobs uv run --flavor GPU_TYPE SCRIPT INPUT_DATASET OUTPUT_DATASET [OPTIONS]
+
+# Example with custom parameters
+hf jobs uv run --flavor a100-large \
+  uv_batch_analysis.py \
+  shaigordin/safaitic-inscriptions \
+  shaigordin/safaitic-results-deepseek \
+  --max-samples 100 \
+  --model deepseek-ai/deepseek-ocr-3b-sft
+
+# Monitor job
+hf jobs status JOB_ID
+
+# View logs
+hf jobs logs JOB_ID
+```
+
+**Available OCR Models** (via uv-scripts):
+- `deepseek-ai/deepseek-ocr-3b-sft` (3B, fast)
+- `Nanonets/nanonets-ocr2` (3.7B, best accuracy)
+- `openbmb/olmOCR2-base` (8B, research quality)
+- `AliD/RolmOCR` (7B, experimental)
+
+### Legacy Gradio Spaces
+
+```bash
+# Still works but slower than MLX-VLM
+python generate_results.py --count 10
+```
+
+## 📊 Viewing Results
+
+### Web Application
+
+Open the interactive results viewer:
+
+```bash
+# Local file
 open docs/index.html
 
-# Or use Python's built-in server
+# Or with local server
 python -m http.server 8000 --directory docs
-# Then visit: http://localhost:8000
+# Visit: http://localhost:8000
 ```
 
 The web app displays:
-- All analyzed inscriptions
-- Original OCIANA images
-- Ground truth transliterations/translations
-- VLM analysis results for each prompt
+- All analyzed inscriptions with images
+- Ground truth transliterations/translations from OCIANA
+- VLM responses for each prompt type
+- Comparative analysis across models
 - Search and filter capabilities
+
+### Compare Results
+
+```python
+# Load and compare MLX vs Ollama results
+import json
+
+with open("docs/data/mlx_results_20250104.json") as f:
+    mlx_results = json.load(f)
+
+with open("docs/data/ollama_results_20250104.json") as f:
+    ollama_results = json.load(f)
+
+# Compare success rates
+mlx_success = mlx_results["metadata"]["success_count"] / mlx_results["metadata"]["total_count"]
+ollama_success = ollama_results["metadata"]["success_count"] / ollama_results["metadata"]["total_count"]
+
+print(f"MLX-VLM success rate: {mlx_success:.1%}")
+print(f"Ollama success rate: {ollama_success:.1%}")
+```
 
 ### Deploy to GitHub Pages
 
-1. Push to GitHub:
+1. Push results:
 ```bash
-git add .
+git add docs/data/*.json
 git commit -m "Add VLM analysis results"
 git push
 ```
 
 2. Enable GitHub Pages:
-   - Go to repository Settings → Pages
-   - Source: Deploy from branch `main`
+   - Repository Settings → Pages
+   - Source: `main` branch
    - Folder: `/docs`
    - Save
 
-3. Visit: `https://shaigordin.github.io/safaitic-ocr/`
+3. View online: `https://[username].github.io/safaitic-ocr/`
 
-3. Visit: `https://shaigordin.github.io/safaitic-ocr/`
+## 🐍 Python API
 
-### Python API Usage
-
-Use the pipeline programmatically:
+### MLX-VLM Usage
 
 ```python
-from src import (
-    load_metadata,
-    get_inscription_data,
-    GradioSpaceVLM,
-    SafaiticPrompts
+from mlx_vlm import load, generate
+from mlx_vlm.prompt_utils import apply_chat_template
+from mlx_vlm.utils import load_config
+from PIL import Image
+
+# Load model (first time downloads ~4.5GB)
+model_path = "mlx-community/Qwen2.5-VL-7B-Instruct-4bit"
+model, processor = load(model_path)
+config = load_config(model_path)
+
+# Prepare image and prompt
+image = Image.open("data/examples/BES15 1/BES15_1_01.jpg")
+prompt = "Describe the script visible in this ancient inscription."
+
+# Format prompt with model's chat template
+formatted_prompt = apply_chat_template(
+    processor, config, prompt, num_images=1
 )
+
+# Generate response
+output = generate(
+    model,
+    processor,
+    formatted_prompt,
+    image=[image],
+    max_tokens=500,
+    temperature=0.7
+)
+
+print(output)
+```
+
+### Using Safaitic-Specific Prompts
+
+```python
+from src.prompt_templates import SafaiticPrompts
+from src.utils import load_metadata, get_inscription_data
 
 # Load inscription data
 df = load_metadata("metadata/BES15.csv")
 inscription = get_inscription_data(df, "data", "BES15 1", load_images=True)
 
-# Initialize FREE VLM (Gradio Space)
-vlm = GradioSpaceVLM(space_id="llava-onevision")
+# Try different prompt types
+prompts = {
+    "description": SafaiticPrompts.basic_description(),
+    "script_id": SafaiticPrompts.script_identification(),
+    "transliteration": SafaiticPrompts.transliteration_attempt()
+}
 
-# Or use local Ollama
-# from src import LlamaVision
-# vlm = LlamaVision(model_name="llama3.2-vision")
-
-# Analyze with a prompt
-prompt = SafaiticPrompts.transliteration_attempt()
-result = vlm.analyze_image(inscription.images[0], prompt)
-
-print(f"Response: {result['response']}")
+for prompt_type, prompt in prompts.items():
+    formatted = apply_chat_template(processor, config, prompt, num_images=1)
+    result = generate(model, processor, formatted, image=[inscription.images[0]])
+    print(f"\n{prompt_type}:\n{result}\n")
 ```
 
-### Available VLM Options
+### Ollama Python Interface (Legacy)
 
-**FREE Gradio Spaces** (recommended):
 ```python
-# LLaVA OneVision (recommended for ancient scripts)
-vlm = GradioSpaceVLM(space_id="llava-onevision")
+from src.vlm_interface import LlamaVision
+from src.prompt_templates import SafaiticPrompts
 
-# Qwen3-VL (official, very popular)
-vlm = GradioSpaceVLM(space_id="qwen3-vl")
-
-# Or use direct space path
-vlm = GradioSpaceVLM(space_id="your-username/your-space")
-```
-
-**Local Ollama** (requires installation):
-```python
+# Initialize Ollama client
 vlm = LlamaVision(model_name="llama3.2-vision")
+
+# Check model availability
+if vlm.check_availability():
+    # Analyze image
+    prompt = SafaiticPrompts.script_identification()
+    result = vlm.analyze_image(inscription.images[0], prompt)
+    
+    print(f"Response: {result['response']}")
+    print(f"Duration: {result['duration']:.2f}s")
+else:
+    print("Ollama not available")
 ```
 
 ## Dataset
@@ -358,22 +544,102 @@ If you use this pipeline in your research, please cite:
 - OCIANA (Online Corpus of the Inscriptions of Ancient North Arabia): https://ociana.osu.edu/
 - Al-Jallad, Ahmad. *An Outline of the Grammar of the Safaitic Inscriptions*. Brill, 2015.
 
-## License
+## 🎓 Future Work
 
-[Specify your license]
+This preliminary evaluation is the foundation for a larger **grounded OCR project** for Safaitic digital scholarly editions. See [docs/future_work.md](docs/future_work.md) for detailed roadmap covering:
 
-## Contributing
+- **Phase 2**: Creating grounded annotation dataset (character-level bounding boxes)
+- **Phase 3**: Fine-tuning VLMs for Safaitic-specific OCR
+- **Phase 4**: Production system for digital scholarly editions
+- **Collaboration**: Funding opportunities and academic partnerships
 
-Contributions welcome! Areas for development:
-- Additional VLM integrations
-- Improved evaluation metrics
-- Enhanced web application features
-- Support for other ancient scripts
-- Fine-tuning experiments
+**Key insight**: General VLMs provide context awareness but need fine-tuning with grounded annotations to actually read Safaitic script.
 
-## Acknowledgments
+## 🤝 Contributing
 
-- **OCIANA** database team for providing ground truth data
-- **HuggingFace** for free Gradio Spaces infrastructure
-- **Ollama** project for local VLM support
-- Safaitic epigraphy research community
+Contributions welcome! Priority areas:
+
+### Immediate (Phase 1 - Current)
+
+- [ ] Test MLX-VLM with different models (Qwen2.5-VL 2B/32B, Idefics3, Pixtral)
+- [ ] Create comparative analysis notebook (MLX vs Ollama vs HF Jobs results)
+- [ ] Enhance web visualization with model comparison view
+- [ ] Add error analysis dashboard (why do VLMs fail?)
+- [ ] Test UV scripts with different OCR models
+
+### Near-term (Phase 2 - Dataset Creation)
+
+- [ ] Prototype annotation interface (Label Studio or custom)
+- [ ] Annotate "gold standard" 100 inscriptions
+- [ ] Develop synthetic data augmentation pipeline
+- [ ] Create annotation guidelines for Safaitic epigraphy students
+- [ ] Build annotation quality validation tools
+
+### Long-term (Phase 3-4 - Fine-tuning & Production)
+
+- [ ] Fine-tune Florence-2 on Safaitic grounded dataset
+- [ ] Implement assisted transcription workflow for scholars
+- [ ] Integrate with OCIANA database
+- [ ] Support TEI EpiDoc export for scholarly editions
+- [ ] Deploy production API for research community
+
+**How to contribute**:
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/your-feature`
+3. Make changes and test
+4. Commit: `git commit -m "Add your feature"`
+5. Push: `git push origin feature/your-feature`
+6. Open Pull Request
+
+## 📧 Contact & Collaboration
+
+Interested in Safaitic grounded OCR research? Looking for collaborators:
+
+- 🎓 **Epigraphy experts** for annotation and validation
+- 💻 **ML engineers** for fine-tuning and optimization  
+- 💰 **Funding partners** for dataset creation and research
+- 🏛️ **Institutions** with Safaitic collections or expertise
+
+**Repository**: [github.com/shaigordin/safaitic-ocr](https://github.com/shaigordin/safaitic-ocr)
+
+## 📚 Citation
+
+If you use this project in your research:
+
+```bibtex
+@software{safaitic_ocr_2025,
+  title={Safaitic OCR: Vision Language Model Evaluation for Ancient Arabian Scripts},
+  author={Gordin, Shai},
+  year={2025},
+  url={https://github.com/shaigordin/safaitic-ocr},
+  note={Preliminary evaluation for grounded OCR research}
+}
+```
+
+## 📖 Data Sources
+
+- **OCIANA** (Ohio State University): [ociana.osu.edu](https://ociana.osu.edu/)
+  - Ground truth transliterations and translations
+  - BES15 corpus (157 inscriptions, 437+ images)
+- **Al-Jallad, Ahmad** (2015): *An Outline of the Grammar of the Safaitic Inscriptions*. Brill.
+  - Linguistic and paleographic reference
+
+## 📄 License
+
+[Specify your license - e.g., MIT, CC BY-SA 4.0]
+
+## 🙏 Acknowledgments
+
+- **OCIANA Team** (Ohio State University) for open-access ground truth data
+- **HuggingFace** for MLX-VLM library and serverless jobs infrastructure
+- **Blaizzy** for [mlx-vlm](https://github.com/Blaizzy/mlx-vlm) library
+- **UV Scripts Team** for [uv-scripts/ocr](https://huggingface.co/datasets/uv-scripts/ocr) patterns
+- **Ollama Project** for local VLM support
+- **Safaitic epigraphy research community** for domain expertise
+
+---
+
+**Status**: Phase 1 (Preliminary Evaluation) - demonstrating VLM capabilities and limitations to support grounded OCR project proposal
+
+**Next steps**: Test MLX-VLM performance, create comparative analysis, prepare grant proposals for Phase 2 (dataset creation)
