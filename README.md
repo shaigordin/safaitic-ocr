@@ -44,306 +44,37 @@ Process all 1,401 inscriptions with zero GPU costs using [uv-scripts/ocr](https:
 
 ```bash
 # Batch OCR on HuggingFace Jobs (no local GPU needed)
-hf jobs uv run --flavor a100-large \
-  https://huggingface.co/datasets/uv-scripts/ocr/raw/main/deepseek-ocr-vllm.py \
-  shaigordin/safaitic-inscriptions \
-  shaigordin/safaitic-ocr-results \
-  --max-samples 1401
-```
+# Safaitic OCR — Quick Start
 
-**Advantages**: Scalable, cost-effective, production OCR models
-**Models**: DeepSeek-OCR (3B), Nanonets-OCR2 (3.7B), olmOCR2 (8B), RolmOCR (7B)
+This repository contains the Safaitic VLM evaluation and a small interactive demo located in `docs/`.
 
-### 3. **Local Ollama** - *Fallback Option*
+Quick pointers:
 
-Local server with vision models:
+- Demo (browse results): `docs/index.html` (open locally or via a simple HTTP server)
+- Evaluation JSON files: `docs/data/` (per-model results for 50 inscriptions)
+- If you need the full release notes or changelog, they have been moved to `archive/`.
 
-```bash
-ollama pull llama3.2-vision
-python generate_results.py --count 50
-```
+If you want the minimal development workflow:
 
-**Advantages**: Fully local, no cloud dependency
-**Limitations**: Frequent timeouts (300s), 44% success rate in testing
-
-## 📊 Comprehensive Results: 5-Model Evaluation
-
-We tested **5 state-of-the-art VLMs** on **50 Safaitic inscriptions** (750 total inferences):
-
-| Model | Success Rate | Size | Key Strength |
-|-------|-------------|------|-------------|
-| **Qwen2-VL-2B** | 100% | 2B | Fastest, smallest |
-| **Idefics3-8B** | 100% | 8B | Most detailed |
-| **Pixtral-12B** | 100% | 12B | Best consistency |
-| **Qwen2.5-VL-7B** | 98.3% | 7B | Recommended for fine-tuning |
-| **Qwen2-VL-7B** | 98.0% | 7B | Balanced performance |
-
-**Average: 98.2% success rate** - all models excel at detecting and contextualizing inscriptions
-
-### What VLMs Can Do ✅
-- Detect ancient inscriptions on rock surfaces
-- Identify script as Safaitic/ancient Arabian
-- Describe visual characteristics accurately
-- Understand archaeological context
-
-### What VLMs Cannot Do ❌
-- Read individual Safaitic letters
-- Provide accurate transliterations
-- Match expert transcriptions
-
-**Key Finding**: The gap between **context understanding** (✅) and **letter recognition** (❌) validates our **grounded OCR approach** → Fine-tuning with character-level bounding boxes will create the first AI-powered Safaitic OCR system.
-
-📊 **Detailed Analysis**: See `notebooks/04_mlx_comparative_analysis.ipynb`
-
-## 📁 Project Structure
-
-```
-safaitic-ocr/
-├── data/
-│   └── examples/              # 1,401 inscriptions (BES15 corpus)
-├── metadata/
-│   └── BES15.csv             # Ground truth from OCIANA
-├── notebooks/
-│   ├── 01_setup_and_explore.ipynb
-│   ├── 02_single_image_test.ipynb
-│   ├── 03_batch_evaluation.ipynb
-│   └── 04_mlx_comparative_analysis.ipynb  # 5-model comparison
-├── docs/
-│   ├── index.html            # Interactive results viewer
-│   ├── data/                 # 50-inscription results (5 models)
-│   ├── future_work.md        # Grounded OCR roadmap  
-│   └── mlx_preliminary_results.md  # Detailed findings
-├── src/                      # Utility modules
-├── analyze_mlx.py            # MLX-VLM batch analysis
-├── uv_batch_analysis.py      # HF Jobs serverless script
-└── generate_comparison_charts.py  # Visualization generator
-```
-
-## 🏁 Quick Start
-
-### Method 1: Local Mac Inference (MLX-VLM) - Recommended
-
-**Requirements**: Apple Silicon Mac (M1/M2/M3/M4)
-
-1. Clone and setup:
 ```bash
 git clone https://github.com/shaigordin/safaitic-ocr.git
 cd safaitic-ocr
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-pip install mlx-vlm
+
+# Run the demo locally
+cd docs
+python3 -m http.server 8000
+# Open http://localhost:8000
 ```
 
-2. Run analysis:
-```bash
-# Analyze 10 inscriptions with Qwen2.5-VL (7B, 4-bit quantized)
-python analyze_mlx.py --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit --count 10 --verbose
+For image deployment we recommend hosting the images on GitHub Releases or an external CDN; see `archive/GITHUB_RELEASE_GUIDE.md` for the archived, detailed instructions.
 
-# Try SmolVLM (2B, very fast)
-python analyze_mlx.py --model mlx-community/SmolVLM-Instruct --count 10
+If you want me to also (optionally) add image filenames into the `docs/data/*.json` files so the demo can load OCIANA-hosted images reliably, say so and I will add that as the next step.
 
-# Analyze all inscriptions
-python analyze_mlx.py --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit --all
-```
-
-**Available Models** (200+ on HuggingFace):
-- `mlx-community/Qwen2.5-VL-7B-Instruct-4bit` (recommended, 4.5GB)
-- `mlx-community/SmolVLM-Instruct` (fastest, 1.2GB)
-- `mlx-community/Idefics3-8B-Llama3-4bit` (good, 4.8GB)
-- `mlx-community/pixtral-12b-4bit` (large, 7GB)
-
-Browse all: https://huggingface.co/mlx-community
-
-### Method 2: Serverless Batch (HF Jobs) - Best for Scale
-
-**Requirements**: HuggingFace account (free), HF CLI
-
-1. Setup HF CLI:
-```bash
-pip install huggingface_hub[cli,hf_transfer]
-huggingface-cli login  # Paste your HF token
-```
-
-2. Prepare your dataset:
-```bash
-# Upload inscription images to HuggingFace dataset
-# (or use existing dataset)
-```
-
-3. Run serverless batch OCR:
-```bash
-# Process with DeepSeek-OCR on A100 GPU
-hf jobs uv run --flavor a100-large \
-  https://raw.githubusercontent.com/shaigordin/safaitic-ocr/main/uv_batch_analysis.py \
-  shaigordin/safaitic-inscriptions \
-  shaigordin/safaitic-ocr-results \
-  --max-samples 1401
-
-# Or use Nanonets-OCR2 model
-hf jobs uv run --flavor a100-large \
-  https://huggingface.co/datasets/uv-scripts/ocr/raw/main/nanonets-ocr2-vllm.py \
-  shaigordin/safaitic-inscriptions \
-  shaigordin/safaitic-ocr-results
-```
-
-**Supported Flavors**:
-- `a100-large`: 1x A100 GPU (best performance)
-- `l4x4`: 4x L4 GPUs (cost-effective)
-- Check pricing: https://huggingface.co/docs/hub/jobs
-
-### Method 3: Local Ollama (Fallback)
-
-**Requirements**: Ollama installed
-
-1. Install Ollama from [ollama.ai](https://ollama.ai)
-
-2. Pull and run:
-```bash
-ollama pull llama3.2-vision
-python generate_results.py --count 10
-```
-
-**Note**: Ollama had 44% success rate in our tests (frequent timeouts). Use MLX-VLM for better results.
-
-## 📖 Detailed Usage
-
-### MLX-VLM: Command-Line Options
-
-```bash
-python analyze_mlx.py \
-  --model mlx-community/Qwen2.5-VL-7B-Instruct-4bit \
-  --count 10 \              # Number of inscriptions to analyze
-  --all \                   # Or analyze all inscriptions
-  --verbose                 # Show detailed progress
-
-# Results saved to: docs/data/mlx_results_YYYYMMDD_HHMMSS.json
-```
-
-### UV Scripts: Batch Processing
-
-```bash
-# Basic usage
-hf jobs uv run --flavor GPU_TYPE SCRIPT INPUT_DATASET OUTPUT_DATASET [OPTIONS]
-
-# Example with custom parameters
-hf jobs uv run --flavor a100-large \
-  uv_batch_analysis.py \
-  shaigordin/safaitic-inscriptions \
-  shaigordin/safaitic-results-deepseek \
-  --max-samples 100 \
-  --model deepseek-ai/deepseek-ocr-3b-sft
-
-# Monitor job
-hf jobs status JOB_ID
-
-# View logs
-hf jobs logs JOB_ID
-```
-
-**Available OCR Models** (via uv-scripts):
-- `deepseek-ai/deepseek-ocr-3b-sft` (3B, fast)
-- `Nanonets/nanonets-ocr2` (3.7B, best accuracy)
-- `openbmb/olmOCR2-base` (8B, research quality)
-- `AliD/RolmOCR` (7B, experimental)
-
-### Legacy Gradio Spaces
-
-```bash
-# Still works but slower than MLX-VLM
-python generate_results.py --count 10
-```
-
-## 📊 Viewing Results
-
-### Web Application
-
-Open the interactive results viewer:
-
-```bash
-# Local file
-open docs/index.html
-
-# Or with local server
-python -m http.server 8000 --directory docs
-# Visit: http://localhost:8000
-```
-
-The web app displays:
-- All analyzed inscriptions with images
-- Ground truth transliterations/translations from OCIANA
-- VLM responses for each prompt type
-- Comparative analysis across models
-- Search and filter capabilities
-
-### Compare Results
-
-```python
-# Load and compare MLX vs Ollama results
-import json
-
-with open("docs/data/mlx_results_20250104.json") as f:
-    mlx_results = json.load(f)
-
-with open("docs/data/ollama_results_20250104.json") as f:
-    ollama_results = json.load(f)
-
-# Compare success rates
-mlx_success = mlx_results["metadata"]["success_count"] / mlx_results["metadata"]["total_count"]
-ollama_success = ollama_results["metadata"]["success_count"] / ollama_results["metadata"]["total_count"]
-
-print(f"MLX-VLM success rate: {mlx_success:.1%}")
-print(f"Ollama success rate: {ollama_success:.1%}")
-```
-
-### Deploy to GitHub Pages
-
-1. Push results:
-```bash
-git add docs/data/*.json
-git commit -m "Add VLM analysis results"
-git push
-```
-
-2. Enable GitHub Pages:
-   - Repository Settings → Pages
-   - Source: `main` branch
-   - Folder: `/docs`
-   - Save
-
-3. View online: `https://[username].github.io/safaitic-ocr/`
-
-## 🐍 Python API
-
-### MLX-VLM Usage
-
-```python
-from mlx_vlm import load, generate
-from mlx_vlm.prompt_utils import apply_chat_template
-from mlx_vlm.utils import load_config
-from PIL import Image
-
-# Load model (first time downloads ~4.5GB)
-model_path = "mlx-community/Qwen2.5-VL-7B-Instruct-4bit"
-model, processor = load(model_path)
-config = load_config(model_path)
-
-# Prepare image and prompt
-image = Image.open("data/examples/BES15 1/BES15_1_01.jpg")
-prompt = "Describe the script visible in this ancient inscription."
-
-# Format prompt with model's chat template
-formatted_prompt = apply_chat_template(
-    processor, config, prompt, num_images=1
-)
-
-# Generate response
-output = generate(
-    model,
-    processor,
-    formatted_prompt,
-    image=[image],
-    max_tokens=500,
+––––
+Light and functional README — let me know what extra link or short section you want here.
     temperature=0.7
 )
 
