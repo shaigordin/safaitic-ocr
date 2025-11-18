@@ -23,6 +23,12 @@ data/examples/
 # Results (but keep docs/data for GitHub Pages)
 results/
 
+# Proposal materials - DO NOT COMMIT
+proposal/
+PROPOSAL*.md
+*_proposal.pdf
+*_proposal.docx
+
 # IDE
 .vscode/
 .idea/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safaitic VLM Analysis - Results Viewer</title>
+    <title>Safaitic VLM Analysis - 5-Model Comparison Viewer</title>
     <style>
         * {
             margin: 0;
@@ -45,6 +45,16 @@
         header p {
             font-size: 1.2em;
             opacity: 0.9;
+        }
+        
+        .model-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+            background: rgba(255,255,255,0.2);
         }
         
         .metadata {
@@ -226,6 +236,25 @@
             gap: 20px;
         }
         
+        .ground-truth {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        
+        .ground-truth strong {
+            color: #f57c00;
+        }
+        
+        .ground-truth em {
+            color: #e65100;
+            font-style: normal;
+            font-family: 'Courier New', monospace;
+        }
+        
         .analysis {
             background: white;
             padding: 20px;
@@ -366,6 +395,15 @@
         </div>
         
         <div class="controls">
+            <label for="model-select">Model:</label>
+            <select id="model-select" onchange="updateModel()">
+                <option value="qwen25-7b">Qwen2.5-VL-7B (98.3%)</option>
+                <option value="qwen2-2b">Qwen2-VL-2B (100%)</option>
+                <option value="qwen2-7b">Qwen2-VL-7B (98.0%)</option>
+                <option value="idefics3-8b">Idefics3-8B (100%)</option>
+                <option value="pixtral-12b">Pixtral-12B (100%)</option>
+            </select>
+            
             <label for="filter-select">Filter by:</label>
             <select id="filter-select">
                 <option value="all">All Inscriptions</option>
@@ -404,8 +442,20 @@
         let currentSearch = '';
         
         async function loadResults() {
+            const modelSelect = document.getElementById('model-select');
+            const selectedModel = modelSelect.value;
+            
+            const modelFiles = {
+                'qwen25-7b': 'qwen25-7b_50inscriptions.json',
+                'qwen2-2b': 'qwen2-2b_50inscriptions.json',
+                'qwen2-7b': 'qwen2-7b_50inscriptions.json',
+                'idefics3-8b': 'idefics3-8b_50inscriptions.json',
+                'pixtral-12b': 'pixtral-12b_50inscriptions.json'
+            };
+            
             try {
-                const response = await fetch('data/latest.json');
+                const filename = modelFiles[selectedModel];
+                const response = await fetch(`data/${filename}`);
                 const data = await response.json();
                 
                 allResults = data.results;
@@ -417,20 +467,43 @@
                         <p style="color: #dc3545;">❌ Error loading results</p>
                         <p style="font-size: 0.9em;">${error.message}</p>
                         <p style="font-size: 0.9em; margin-top: 20px;">
-                            Make sure to run: <code>python generate_results.py</code>
+                            Expected files in docs/data/ directory
                         </p>
                     </div>
                 `;
             }
         }
         
+        function updateModel() {
+            loadResults();
+        }
+        
         function updateMetadata(metadata) {
-            document.getElementById('total-count').textContent = metadata.total_processed || 0;
-            document.getElementById('model-name').textContent = metadata.model || 'Unknown';
+            const numInscriptions = metadata.num_inscriptions || 0;
+            const numPrompts = metadata.num_prompts || 0;
+            const totalProcessed = numInscriptions * numPrompts;
+            
+            document.getElementById('total-count').textContent = numInscriptions;
+            document.getElementById('model-name').textContent = (metadata.model || 'Unknown').replace('mlx-community/', '');
             document.getElementById('timestamp').textContent = formatDate(metadata.timestamp);
             
-            const successRate = metadata.successful / metadata.total_processed * 100;
-            document.getElementById('success-rate').textContent = successRate.toFixed(1) + '%';
+            // Calculate success rate from results
+            if (allResults && allResults.length > 0) {
+                let totalPrompts = 0;
+                let successfulPrompts = 0;
+                allResults.forEach(r => {
+                    if (r.prompts) {
+                        r.prompts.forEach(p => {
+                            totalPrompts++;
+                            if (p.success) successfulPrompts++;
+                        });
+                    }
+                });
+                const successRate = totalPrompts > 0 ? (successfulPrompts / totalPrompts * 100) : 0;
+                document.getElementById('success-rate').textContent = successRate.toFixed(1) + '%';
+            } else {
+                document.getElementById('success-rate').textContent = '-';
+            }
         }
         
         function formatDate(timestamp) {
@@ -447,18 +520,18 @@
             // Apply filter
             if (currentFilter === 'success') {
                 filtered = filtered.filter(r => 
-                    Object.values(r.analyses).some(a => a.success)
+                    r.prompts && r.prompts.some(p => p.success)
                 );
             } else if (currentFilter === 'error') {
                 filtered = filtered.filter(r => 
-                    Object.values(r.analyses).some(a => !a.success)
+                    r.prompts && r.prompts.some(p => !p.success)
                 );
             }
             
             // Apply search
             if (currentSearch) {
                 filtered = filtered.filter(r => 
-                    r.siglum.toLowerCase().includes(currentSearch.toLowerCase())
+                    r.inscription_siglum.toLowerCase().includes(currentSearch.toLowerCase())
                 );
             }
             
@@ -473,46 +546,71 @@
         }
         
         function renderInscription(result) {
-            const images = result.ociana_urls.map((url, i) => `
-                <div class="image-container">
-                    <a href="${url}" target="_blank">
-                        <img src="${url}" alt="${result.siglum} - Image ${i+1}" 
-                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27250%27%3E%3Crect fill=%27%23ddd%27 width=%27250%27 height=%27250%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%23666%27%3EImage Unavailable%3C/text%3E%3C/svg%3E'">
-                    </a>
-                </div>
-            `).join('');
+            // Build images based on OCIANA URLs
+            const siglum = result.inscription_siglum.replace('BES15 ', '');
+            const baseUrl = 'https://ociana.museum.upenn.edu/gallery/get_jpg_image.php';
+            const images = [];
+            for (let i = 1; i <= result.num_images; i++) {
+                const url = `${baseUrl}?filename=${siglum}-${i}`;
+                images.push(`
+                    <div class="image-container">
+                        <a href="${url}" target="_blank">
+                            <img src="${url}" alt="${result.inscription_siglum} - Image ${i}" 
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27250%27%3E%3Crect fill=%27%23ddd%27 width=%27250%27 height=%27250%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%23666%27%3EImage Unavailable%3C/text%3E%3C/svg%3E'">
+                        </a>
+                    </div>
+                `);
+            }
             
-            const analyses = Object.entries(result.analyses).map(([name, analysis]) => `
-                <div class="analysis ${analysis.success ? '' : 'error'}">
+            const analyses = result.prompts.map(prompt => `
+                <div class="analysis ${prompt.success ? '' : 'error'}">
                     <div class="analysis-header">
                         <div class="analysis-title">
-                            ${name.replace('_', ' ').toUpperCase()}
-                            ${analysis.success ? '✓' : '✗'}
+                            ${prompt.prompt_name.replace('_', ' ').toUpperCase()}
+                            ${prompt.success ? '✓' : '✗'}
                         </div>
                         <div class="analysis-meta">
-                            ${analysis.duration ? `${analysis.duration.toFixed(1)}s` : ''}
+                            ${prompt.duration_seconds ? `${prompt.duration_seconds.toFixed(1)}s` : '<1s'}
                         </div>
                     </div>
                     <div class="analysis-prompt">
-                        <strong>Prompt:</strong> ${escapeHtml(analysis.prompt)}
+                        <strong>Prompt:</strong> ${escapeHtml(prompt.prompt)}
                     </div>
-                    ${analysis.success ? `
-                        <div class="analysis-response">${escapeHtml(analysis.response)}</div>
+                    ${prompt.success ? `
+                        <div class="analysis-response">${escapeHtml(prompt.response)}</div>
                     ` : `
-                        <div class="error-message">Error: ${escapeHtml(analysis.error || 'Unknown error')}</div>
+                        <div class="error-message">Error: ${escapeHtml(prompt.error || 'Unknown error')}</div>
                     `}
                 </div>
             `).join('');
             
+            const groundTruth = result.ground_truth ? `
+                <div class="ground-truth">
+                    <strong>Ground Truth:</strong><br>
+                    <em>${escapeHtml(result.ground_truth.transliteration)}</em><br>
+                    "${escapeHtml(result.ground_truth.translation)}"
+                </div>
+            ` : '';
+            
             return `
                 <div class="inscription">
                     <div class="inscription-header">
-                        <div class="inscription-title">${escapeHtml(result.siglum)}</div>
+                        <div class="inscription-title">${escapeHtml(result.inscription_siglum)}</div>
                         <div class="image-count">${result.num_images} image${result.num_images > 1 ? 's' : ''}</div>
                     </div>
                     
                     <div class="images-grid">
-                        ${images}
+                        ${images.join('')}
+                    </div>
+                    
+                    ${groundTruth}
+                    
+                    <div class="analyses">
+                        ${analyses}
+                    </div>
+                </div>
+            `;
+        }
                     </div>
                     
                     <div class="ground-truth">

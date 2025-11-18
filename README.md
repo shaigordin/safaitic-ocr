@@ -66,43 +66,57 @@ python generate_results.py --count 50
 **Advantages**: Fully local, no cloud dependency
 **Limitations**: Frequent timeouts (300s), 44% success rate in testing
 
-## 📊 Current Results
+## 📊 Comprehensive Results: 5-Model Evaluation
 
-We've tested with **mlx-vlm (Qwen2.5-VL)** and **Ollama (llama3.2-vision)** on small samples:
-- ✅ **Script identification**: Recognizes "ancient inscriptions", "rock surface", "text"
-- ⚠️ **Transliteration**: Cannot read Safaitic letters (expected - not in training data)
-- ⚠️ **Complex prompts**: Timeouts on detailed transliteration requests
-- 📈 **Success rate**: ~60-100% depending on prompt complexity and model
+We tested **5 state-of-the-art VLMs** on **50 Safaitic inscriptions** (750 total inferences):
 
-**Key Finding**: General VLMs understand *context* (ancient, rock-carved) but lack *script knowledge* → **Fine-tuning required**
+| Model | Success Rate | Size | Key Strength |
+|-------|-------------|------|-------------|
+| **Qwen2-VL-2B** | 100% | 2B | Fastest, smallest |
+| **Idefics3-8B** | 100% | 8B | Most detailed |
+| **Pixtral-12B** | 100% | 12B | Best consistency |
+| **Qwen2.5-VL-7B** | 98.3% | 7B | Recommended for fine-tuning |
+| **Qwen2-VL-7B** | 98.0% | 7B | Balanced performance |
+
+**Average: 98.2% success rate** - all models excel at detecting and contextualizing inscriptions
+
+### What VLMs Can Do ✅
+- Detect ancient inscriptions on rock surfaces
+- Identify script as Safaitic/ancient Arabian
+- Describe visual characteristics accurately
+- Understand archaeological context
+
+### What VLMs Cannot Do ❌
+- Read individual Safaitic letters
+- Provide accurate transliterations
+- Match expert transcriptions
+
+**Key Finding**: The gap between **context understanding** (✅) and **letter recognition** (❌) validates our **grounded OCR approach** → Fine-tuning with character-level bounding boxes will create the first AI-powered Safaitic OCR system.
+
+📊 **Detailed Analysis**: See `notebooks/04_mlx_comparative_analysis.ipynb`
 
 ## 📁 Project Structure
 
 ```
 safaitic-ocr/
 ├── data/
-│   └── examples/           # 1,401 inscriptions with images (BES15 corpus)
+│   └── examples/              # 1,401 inscriptions (BES15 corpus)
 ├── metadata/
-│   └── BES15.csv          # Ground truth from OCIANA database
-├── src/
-│   ├── utils.py           # Data loading utilities
-│   ├── vlm_interface.py   # Ollama interface (legacy)
-│   ├── mlx_vlm_interface.py    # NEW: MLX-VLM interface
-│   ├── prompt_templates.py     # Safaitic-specific prompts
-│   └── evaluator.py       # Evaluation metrics
+│   └── BES15.csv             # Ground truth from OCIANA
 ├── notebooks/
 │   ├── 01_setup_and_explore.ipynb
 │   ├── 02_single_image_test.ipynb
 │   ├── 03_batch_evaluation.ipynb
-│   └── 04_preliminary_results_analysis.ipynb  # NEW
+│   └── 04_mlx_comparative_analysis.ipynb  # 5-model comparison
 ├── docs/
-│   ├── index.html         # Results visualization
-│   ├── data/latest.json   # Analysis results
-│   └── future_work.md     # NEW: Grounded OCR roadmap
-├── analyze_mlx.py         # NEW: MLX-VLM batch analysis
-├── uv_batch_analysis.py   # NEW: HF Jobs UV script
-├── generate_results.py    # Legacy Ollama script
-└── requirements.txt
+│   ├── index.html            # Interactive results viewer
+│   ├── data/                 # 50-inscription results (5 models)
+│   ├── future_work.md        # Grounded OCR roadmap  
+│   └── mlx_preliminary_results.md  # Detailed findings
+├── src/                      # Utility modules
+├── analyze_mlx.py            # MLX-VLM batch analysis
+├── uv_batch_analysis.py      # HF Jobs serverless script
+└── generate_comparison_charts.py  # Visualization generator
 ```
 
 ## 🏁 Quick Start
@@ -544,16 +558,28 @@ If you use this pipeline in your research, please cite:
 - OCIANA (Online Corpus of the Inscriptions of Ancient North Arabia): https://ociana.osu.edu/
 - Al-Jallad, Ahmad. *An Outline of the Grammar of the Safaitic Inscriptions*. Brill, 2015.
 
-## 🎓 Future Work
+## 🎓 Next Steps: Grounded OCR Project
 
-This preliminary evaluation is the foundation for a larger **grounded OCR project** for Safaitic digital scholarly editions. See [docs/future_work.md](docs/future_work.md) for detailed roadmap covering:
+This comprehensive 5-model evaluation validates the **grounded OCR approach**:
 
-- **Phase 2**: Creating grounded annotation dataset (character-level bounding boxes)
-- **Phase 3**: Fine-tuning VLMs for Safaitic-specific OCR
-- **Phase 4**: Production system for digital scholarly editions
-- **Collaboration**: Funding opportunities and academic partnerships
+### Phase 2: Dataset Creation (Next)
+- Annotate 500-1,000 inscriptions with character-level bounding boxes
+- Partner with expert epigraphers (Oxford, Leiden, Chicago)
+- Release open-access dataset on HuggingFace
 
-**Key insight**: General VLMs provide context awareness but need fine-tuning with grounded annotations to actually read Safaitic script.
+### Phase 3: Fine-tuning
+- Fine-tune Qwen2.5-VL-7B or Qwen2-VL-2B on annotated dataset
+- Target: >80% character-level accuracy
+- LoRA/QLoRA for efficient training on Apple Silicon
+
+### Phase 4: Production System
+- Deploy OCR API and web interface
+- Integrate with OCIANA database
+- TEI EpiDoc export for scholarly editions
+
+📄 **See [docs/future_work.md](docs/future_work.md) for complete roadmap**
+
+**Key Insight**: VLMs have strong vision + context understanding but lack letter-level knowledge. Grounded OCR with bounding boxes fills this specific gap.
 
 ## 🤝 Contributing
 
