@@ -20,6 +20,9 @@ data/examples/
 *.tif
 *.tiff
 
+# Exception: Allow the compressed images zip for GitHub Pages
+!docs/inscription_images.zip
+
 # Results (but keep docs/data for GitHub Pages)
 results/
 
@@ -28,6 +31,10 @@ proposal/
 PROPOSAL*.md
 *_proposal.pdf
 *_proposal.docx
+
+# Documentation update files - DO NOT COMMIT
+DOCUMENTATION_UPDATE_SUMMARY.md
+VISUALIZATION_IMPROVEMENTS.md
 
 # IDE
 .vscode/

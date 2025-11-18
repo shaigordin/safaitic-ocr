@@ -417,6 +417,14 @@
             <button onclick="loadResults()">Refresh Data</button>
         </div>
         
+        <div class="pagination-controls" style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <button onclick="previousInscription()" id="prev-btn" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;" disabled>← Previous</button>
+            <div style="font-size: 18px; font-weight: 600; min-width: 150px; text-align: center;">
+                <span id="page-info">- of -</span>
+            </div>
+            <button onclick="nextInscription()" id="next-btn" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;" disabled>Next →</button>
+        </div>
+        
         <div class="content" id="content">
             <div class="loading">
                 <div class="spinner"></div>
@@ -438,8 +446,10 @@
     
     <script>
         let allResults = [];
+        let filteredResults = [];
         let currentFilter = 'all';
         let currentSearch = '';
+        let currentPage = 0;
         
         async function loadResults() {
             const modelSelect = document.getElementById('model-select');
@@ -453,21 +463,43 @@
                 'pixtral-12b': 'pixtral-12b_50inscriptions.json'
             };
             
+            // Show loading state
+            document.getElementById('content').innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading ${selectedModel} results...</p>
+                </div>
+            `;
+            
             try {
                 const filename = modelFiles[selectedModel];
+                console.log('Loading file:', filename);
                 const response = await fetch(`data/${filename}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const data = await response.json();
+                console.log('Data loaded:', data);
+                
+                if (!data.results || !Array.isArray(data.results)) {
+                    throw new Error('Invalid data format: missing results array');
+                }
                 
                 allResults = data.results;
+                console.log('Results count:', allResults.length);
+                
                 updateMetadata(data.metadata);
                 displayResults();
             } catch (error) {
+                console.error('Error loading results:', error);
                 document.getElementById('content').innerHTML = `
                     <div class="loading">
                         <p style="color: #dc3545;">❌ Error loading results</p>
                         <p style="font-size: 0.9em;">${error.message}</p>
                         <p style="font-size: 0.9em; margin-top: 20px;">
-                            Expected files in docs/data/ directory
+                            Check browser console for details.
                         </p>
                     </div>
                 `;
@@ -515,6 +547,7 @@
         }
         
         function displayResults() {
+            console.log('displayResults called, allResults:', allResults.length);
             let filtered = allResults;
             
             // Apply filter
@@ -535,29 +568,93 @@
                 );
             }
             
+            filteredResults = filtered;
+            console.log('Filtered results:', filteredResults.length);
+            
+            // Reset to first page if filter changes and current page is out of bounds
+            if (currentPage >= filteredResults.length) {
+                currentPage = 0;
+            }
+            
             const content = document.getElementById('content');
             
-            if (filtered.length === 0) {
+            if (filteredResults.length === 0) {
                 content.innerHTML = '<div class="loading"><p>No results match your filters</p></div>';
+                updatePaginationControls();
                 return;
             }
             
-            content.innerHTML = filtered.map(r => renderInscription(r)).join('');
+            try {
+                // Display only the current inscription
+                const currentResult = filteredResults[currentPage];
+                const html = renderInscription(currentResult);
+                console.log('Generated HTML length:', html.length);
+                content.innerHTML = html;
+                updatePaginationControls();
+                console.log('Display complete');
+            } catch (error) {
+                console.error('Error rendering results:', error);
+                content.innerHTML = `<div class="loading"><p style="color: #dc3545;">Error rendering: ${error.message}</p></div>`;
+            }
+        }
+        
+        function updatePaginationControls() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const pageInfo = document.getElementById('page-info');
+            
+            if (filteredResults.length === 0) {
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                pageInfo.textContent = '- of -';
+                return;
+            }
+            
+            // Update page info
+            pageInfo.textContent = `${currentPage + 1} of ${filteredResults.length}`;
+            
+            // Update button states
+            prevBtn.disabled = currentPage === 0;
+            nextBtn.disabled = currentPage >= filteredResults.length - 1;
+            
+            // Add hover effects
+            prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
+            nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+            prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
+            nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
+        }
+        
+        function previousInscription() {
+            if (currentPage > 0) {
+                currentPage--;
+                displayResults();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+        
+        function nextInscription() {
+            if (currentPage < filteredResults.length - 1) {
+                currentPage++;
+                displayResults();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
         
         function renderInscription(result) {
-            // Build images based on OCIANA URLs
-            const siglum = result.inscription_siglum.replace('BES15 ', '');
-            const baseUrl = 'https://ociana.museum.upenn.edu/gallery/get_jpg_image.php';
+            // Build images based on local paths
+            // Note: Images are stored locally at ../data/examples/BES15/{siglum}/
+            // For GitHub Pages deployment, images should be in a separate zip or hosted externally
+            const siglum = result.inscription_siglum;
             const images = [];
+            
+            // Placeholder: Images are not included in repo due to size
+            // They would be at: ../data/examples/BES15/${siglum}/im*.jpg
+            const placeholderSvg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Crect fill='%23f0f0f0' width='250' height='250'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='16'%3E${encodeURIComponent(siglum)}%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='12'%3EImages not included%3C/text%3E%3Ctext x='50%25' y='65%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='10'%3E(See data/examples/BES15/)%3C/text%3E%3C/svg%3E`;
+            
             for (let i = 1; i <= result.num_images; i++) {
-                const url = `${baseUrl}?filename=${siglum}-${i}`;
                 images.push(`
                     <div class="image-container">
-                        <a href="${url}" target="_blank">
-                            <img src="${url}" alt="${result.inscription_siglum} - Image ${i}" 
-                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27250%27 height=%27250%27%3E%3Crect fill=%27%23ddd%27 width=%27250%27 height=%27250%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%23666%27%3EImage Unavailable%3C/text%3E%3C/svg%3E'">
-                        </a>
+                        <img src="${placeholderSvg}" alt="${result.inscription_siglum} - Image ${i}">
                     </div>
                 `);
             }
@@ -611,26 +708,6 @@
                 </div>
             `;
         }
-                    </div>
-                    
-                    <div class="ground-truth">
-                        <h3>📜 Ground Truth (OCIANA)</h3>
-                        <div class="ground-truth-item">
-                            <strong>Transliteration:</strong>
-                            <div class="text">${escapeHtml(result.transliteration_ground_truth || 'N/A')}</div>
-                        </div>
-                        <div class="ground-truth-item">
-                            <strong>Translation:</strong>
-                            <div class="text">${escapeHtml(result.translation_ground_truth || 'N/A')}</div>
-                        </div>
-                    </div>
-                    
-                    <div class="analyses">
-                        ${analyses}
-                    </div>
-                </div>
-            `;
-        }
         
         function escapeHtml(text) {
             const div = document.createElement('div');
@@ -638,19 +715,36 @@
             return div.innerHTML;
         }
         
-        // Event listeners
-        document.getElementById('filter-select').addEventListener('change', (e) => {
-            currentFilter = e.target.value;
-            displayResults();
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...');
+            
+            // Event listeners
+            document.getElementById('filter-select').addEventListener('change', (e) => {
+                currentFilter = e.target.value;
+                currentPage = 0; // Reset to first page when filter changes
+                displayResults();
+            });
+            
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                currentSearch = e.target.value;
+                currentPage = 0; // Reset to first page when search changes
+                displayResults();
+            });
+            
+            // Add keyboard navigation (arrow keys)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft' && currentPage > 0) {
+                    previousInscription();
+                } else if (e.key === 'ArrowRight' && currentPage < filteredResults.length - 1) {
+                    nextInscription();
+                }
+            });
+            
+            // Load results on page load
+            console.log('Loading initial results...');
+            loadResults();
         });
-        
-        document.getElementById('search-input').addEventListener('input', (e) => {
-            currentSearch = e.target.value;
-            displayResults();
-        });
-        
-        // Load results on page load
-        loadResults();
     </script>
 </body>
 </html>

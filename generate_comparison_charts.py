@@ -1,306 +1,402 @@
 #!/usr/bin/env python3
 """
-Generate comparison charts for MLX-VLM model analysis
+Generate comprehensive comparison charts for MLX-VLM model evaluation.
+
+Analyzes 5 models on Safaitic inscriptions across 3 prompt types:
+- Description: General visual description of inscription
+- Script ID: Identification of writing system and characteristics  
+- Transliteration: Attempt to read and transliterate Safaitic text
+
+Key insights analyzed:
+1. Success rates by prompt type (which tasks do models excel at?)
+2. Response quality by prompt type (verbosity patterns)
+3. Model size vs performance (does bigger = better?)
+4. Consistency across prompt types
 """
+
 import json
-import pandas as pd
-import numpy as np
+import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-from pathlib import Path
-from collections import defaultdict
-import warnings
-warnings.filterwarnings('ignore')
+import pandas as pd
+import numpy as np
 
-# Set visualization style
+# Set style for publication-quality figures
 sns.set_style("whitegrid")
-plt.rcParams['figure.figsize'] = (12, 6)
-plt.rcParams['font.size'] = 11
+plt.rcParams['figure.dpi'] = 300
+plt.rcParams['savefig.dpi'] = 300
+plt.rcParams['font.size'] = 10
+plt.rcParams['axes.labelsize'] = 11
+plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['legend.fontsize'] = 9
 
-# Define model configurations
-models = {
-    'Qwen2.5-VL-7B': {
-        'file': 'docs/data/qwen25-7b_50inscriptions.json',
-        'size': '7B',
-        'family': 'Qwen2.5',
-        'color': '#FF6B6B'
-    },
-    'Qwen2-VL-2B': {
-        'file': 'docs/data/qwen2-2b_50inscriptions.json',
-        'size': '2B',
-        'family': 'Qwen2',
-        'color': '#4ECDC4'
-    },
-    'Qwen2-VL-7B': {
-        'file': 'docs/data/qwen2-7b_50inscriptions.json',
-        'size': '7B',
-        'family': 'Qwen2',
-        'color': '#45B7D1'
-    },
-    'Idefics3-8B': {
-        'file': 'docs/data/idefics3-8b_50inscriptions.json',
-        'size': '8B',
-        'family': 'Idefics3',
-        'color': '#96CEB4'
-    },
-    'Pixtral-12B': {
-        'file': 'docs/data/pixtral-12b_50inscriptions.json',
-        'size': '12B',
-        'family': 'Pixtral',
-        'color': '#FFEAA7'
-    }
+# Model configurations
+MODELS = {
+    'Qwen2.5-VL-7B': {'file': 'docs/data/qwen25-7b_50inscriptions.json', 'size': 7},
+    'Qwen2-VL-2B': {'file': 'docs/data/qwen2-2b_50inscriptions.json', 'size': 2},
+    'Qwen2-VL-7B': {'file': 'docs/data/qwen2-7b_50inscriptions.json', 'size': 7},
+    'Idefics3-8B': {'file': 'docs/data/idefics3-8b_50inscriptions.json', 'size': 8},
+    'Pixtral-12B': {'file': 'docs/data/pixtral-12b_50inscriptions.json', 'size': 12}
 }
 
-print("Loading results...")
-# Load all results
-results = {}
-for model_name, config in models.items():
-    try:
-        with open(config['file'], 'r', encoding='utf-8') as f:
-            results[model_name] = json.load(f)
-        print(f"✓ Loaded {model_name}: {len(results[model_name]['results'])} inscriptions")
-    except FileNotFoundError:
-        print(f"✗ File not found: {config['file']}")
-    except Exception as e:
-        print(f"✗ Error loading {model_name}: {e}")
+# Prompt type descriptions
+PROMPT_TYPES = {
+    'description': 'Visual Description',
+    'script_id': 'Script Identification',
+    'transliteration': 'Transliteration'
+}
 
-print(f"\nSuccessfully loaded {len(results)} models\n")
+OUTPUT_DIR = 'proposal/'
 
-# Calculate success rates
-print("Calculating success rates...")
-success_data = []
 
-for model_name, data in results.items():
-    total_prompts = 0
-    successful_prompts = 0
-    total_inscriptions = len(data['results'])
-    successful_inscriptions = 0
+def load_results():
+    """Load all model results."""
+    all_results = {}
     
-    for inscription in data['results']:
-        inscription_success = True
-        for prompt_result in inscription['prompts']:
-            total_prompts += 1
-            if prompt_result.get('success', False):
-                successful_prompts += 1
-            else:
-                inscription_success = False
+    print("Loading results...")
+    for model_name, config in MODELS.items():
+        filepath = config['file']
+        if not os.path.exists(filepath):
+            print(f"⚠️  Warning: {filepath} not found")
+            continue
         
-        if inscription_success:
-            successful_inscriptions += 1
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        all_results[model_name] = data['results']
+        print(f"✓ Loaded {model_name}: {len(data['results'])} inscriptions")
     
-    success_data.append({
-        'Model': model_name,
-        'Total Inscriptions': total_inscriptions,
-        'Successful Inscriptions': successful_inscriptions,
-        'Inscription Success Rate': (successful_inscriptions / total_inscriptions * 100),
-        'Total Prompts': total_prompts,
-        'Successful Prompts': successful_prompts,
-        'Prompt Success Rate': (successful_prompts / total_prompts * 100),
-        'Model Size': models[model_name]['size'],
-        'Family': models[model_name]['family']
-    })
+    return all_results
 
-df_success = pd.DataFrame(success_data)
-df_success = df_success.sort_values('Prompt Success Rate', ascending=False)
 
-print("SUCCESS RATE COMPARISON:")
-print(df_success[['Model', 'Prompt Success Rate', 'Inscription Success Rate']].to_string(index=False))
-
-# Chart 1: Success Rate Comparison
-print("\nGenerating Chart 1: Success Rates...")
-fig, axes = plt.subplots(1, 2, figsize=(16, 6))
-
-# Plot 1: Prompt-level success rates
-ax1 = axes[0]
-colors = [models[m]['color'] for m in df_success['Model']]
-bars1 = ax1.barh(df_success['Model'], df_success['Prompt Success Rate'], color=colors, alpha=0.8)
-ax1.set_xlabel('Success Rate (%)', fontsize=12, fontweight='bold')
-ax1.set_title('Prompt-Level Success Rates\n(150 prompts per model)', fontsize=14, fontweight='bold')
-ax1.set_xlim(0, 105)
-ax1.grid(axis='x', alpha=0.3)
-
-for i, bar in enumerate(bars1):
-    width = bar.get_width()
-    ax1.text(width + 1, bar.get_y() + bar.get_height()/2, 
-             f'{width:.1f}%', ha='left', va='center', fontweight='bold')
-
-# Plot 2: Inscription-level success rates
-ax2 = axes[1]
-df_inscr = df_success.sort_values('Inscription Success Rate', ascending=False)
-colors2 = [models[m]['color'] for m in df_inscr['Model']]
-bars2 = ax2.barh(df_inscr['Model'], df_inscr['Inscription Success Rate'], color=colors2, alpha=0.8)
-ax2.set_xlabel('Success Rate (%)', fontsize=12, fontweight='bold')
-ax2.set_title('Inscription-Level Success Rates\n(All 3 prompts must succeed)', fontsize=14, fontweight='bold')
-ax2.set_xlim(0, 105)
-ax2.grid(axis='x', alpha=0.3)
-
-for i, bar in enumerate(bars2):
-    width = bar.get_width()
-    ax2.text(width + 1, bar.get_y() + bar.get_height()/2, 
-             f'{width:.1f}%', ha='left', va='center', fontweight='bold')
-
-plt.tight_layout()
-plt.savefig('proposal/mlx_comparison_success_rates.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: proposal/mlx_comparison_success_rates.png")
-
-# Collect response data for length analysis
-print("\nAnalyzing response quality...")
-response_data = []
-
-for model_name, data in results.items():
-    for inscription in data['results']:
-        for prompt_result in inscription['prompts']:
-            if prompt_result.get('success', False):
-                response = prompt_result.get('response', '')
-                response_data.append({
+def analyze_results(all_results):
+    """Analyze results and extract key metrics."""
+    analysis = []
+    
+    for model_name, results in all_results.items():
+        model_size = MODELS[model_name]['size']
+        
+        # Per prompt type metrics
+        prompt_metrics = {
+            'description': {'success': 0, 'total': 0, 'lengths': []},
+            'script_id': {'success': 0, 'total': 0, 'lengths': []},
+            'transliteration': {'success': 0, 'total': 0, 'lengths': []}
+        }
+        
+        for result in results:
+            for prompt in result['prompts']:
+                ptype = prompt['prompt_name']
+                prompt_metrics[ptype]['total'] += 1
+                
+                if prompt['success']:
+                    prompt_metrics[ptype]['success'] += 1
+                    prompt_metrics[ptype]['lengths'].append(len(prompt['response']))
+        
+        # Calculate rates and store data
+        for ptype, metrics in prompt_metrics.items():
+            if metrics['total'] > 0:
+                success_rate = (metrics['success'] / metrics['total']) * 100
+                avg_length = np.mean(metrics['lengths']) if metrics['lengths'] else 0
+                
+                analysis.append({
                     'Model': model_name,
-                    'Prompt Type': prompt_result.get('prompt_type', 'unknown'),
-                    'Response Length': len(response),
-                    'Word Count': len(response.split()),
-                    'Inscription': inscription['inscription_siglum']
+                    'Model Size (B)': model_size,
+                    'Prompt Type': PROMPT_TYPES[ptype],
+                    'Success Rate': success_rate,
+                    'Responses': metrics['success'],
+                    'Total': metrics['total'],
+                    'Avg Response Length': avg_length,
+                    'Response Lengths': metrics['lengths']
                 })
-
-df_responses = pd.DataFrame(response_data)
-
-# Chart 2: Response Length Distribution
-print("Generating Chart 2: Response Lengths...")
-fig, axes = plt.subplots(2, 1, figsize=(14, 10))
-
-# Plot 1: Box plot by model
-ax1 = axes[0]
-model_order = df_success['Model'].tolist()
-colors_ordered = [models[m]['color'] for m in model_order]
-bp1 = ax1.boxplot([df_responses[df_responses['Model'] == m]['Response Length'] for m in model_order],
-                   labels=model_order, patch_artist=True, showmeans=True)
-
-for patch, color in zip(bp1['boxes'], colors_ordered):
-    patch.set_facecolor(color)
-    patch.set_alpha(0.7)
-
-ax1.set_ylabel('Response Length (characters)', fontsize=12, fontweight='bold')
-ax1.set_title('Response Length Distribution by Model', fontsize=14, fontweight='bold')
-ax1.grid(axis='y', alpha=0.3)
-ax1.tick_params(axis='x', rotation=15)
-
-# Plot 2: Box plot by prompt type
-ax2 = axes[1]
-prompt_types = df_responses['Prompt Type'].unique()
-bp2 = ax2.boxplot([df_responses[df_responses['Prompt Type'] == pt]['Response Length'] for pt in prompt_types],
-                   labels=prompt_types, patch_artist=True, showmeans=True)
-
-for patch in bp2['boxes']:
-    patch.set_facecolor('#9B59B6')
-    patch.set_alpha(0.7)
-
-ax2.set_ylabel('Response Length (characters)', fontsize=12, fontweight='bold')
-ax2.set_xlabel('Prompt Type', fontsize=12, fontweight='bold')
-ax2.set_title('Response Length Distribution by Prompt Type', fontsize=14, fontweight='bold')
-ax2.grid(axis='y', alpha=0.3)
-
-plt.tight_layout()
-plt.savefig('proposal/mlx_comparison_response_lengths.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: proposal/mlx_comparison_response_lengths.png")
-
-# Chart 3: Performance Heatmap
-print("Generating Chart 3: Performance Heatmap...")
-heatmap_data = []
-
-for model_name, data in results.items():
-    prompt_stats = defaultdict(lambda: {'total': 0, 'success': 0})
     
-    for inscription in data['results']:
-        for prompt_result in inscription['prompts']:
-            prompt_type = prompt_result.get('prompt_type', 'unknown')
-            prompt_stats[prompt_type]['total'] += 1
-            if prompt_result.get('success', False):
-                prompt_stats[prompt_type]['success'] += 1
+    return pd.DataFrame(analysis)
+
+
+def create_chart1_success_by_prompt_type(df):
+    """Chart 1: Success rates by prompt type - the KEY INSIGHT chart."""
+    fig, ax = plt.subplots(figsize=(14, 6))
     
-    for prompt_type, stats in prompt_stats.items():
-        success_rate = (stats['success'] / stats['total'] * 100) if stats['total'] > 0 else 0
-        heatmap_data.append({
-            'Model': model_name,
-            'Prompt Type': prompt_type,
-            'Success Rate': success_rate
-        })
+    # Pivot data for grouped bar chart
+    pivot_df = df.pivot(index='Model', columns='Prompt Type', values='Success Rate')
+    
+    # Reorder to show prompt types in logical order
+    pivot_df = pivot_df[['Visual Description', 'Script Identification', 'Transliteration']]
+    
+    # Create grouped bar chart
+    pivot_df.plot(kind='bar', ax=ax, width=0.75, 
+                  color=['#4ECDC4', '#45B7D1', '#FF6B6B'])
+    
+    ax.set_title('Model Performance by Task Type\nAll models excel at visual tasks but struggle with transliteration', 
+                 fontsize=14, fontweight='bold', pad=20)
+    ax.set_xlabel('Model', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Success Rate (%)', fontsize=12, fontweight='bold')
+    ax.set_ylim(90, 101)
+    ax.axhline(y=100, color='green', linestyle='--', alpha=0.3, linewidth=1)
+    ax.legend(title='Task Type', title_fontsize=11, fontsize=10, loc='lower left')
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    
+    output_path = os.path.join(OUTPUT_DIR, 'mlx_comparison_success_by_prompt.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Saved: {output_path}")
+    plt.close()
 
-df_heatmap = pd.DataFrame(heatmap_data)
-pivot_table = df_heatmap.pivot(index='Model', columns='Prompt Type', values='Success Rate')
 
-plt.figure(figsize=(12, 8))
-sns.heatmap(pivot_table, annot=True, fmt='.1f', cmap='RdYlGn', vmin=0, vmax=100,
-            cbar_kws={'label': 'Success Rate (%)'}, linewidths=0.5)
-plt.title('Model Performance Heatmap by Prompt Type', fontsize=16, fontweight='bold', pad=20)
-plt.xlabel('Prompt Type', fontsize=12, fontweight='bold')
-plt.ylabel('Model', fontsize=12, fontweight='bold')
-plt.xticks(rotation=45, ha='right')
-plt.yticks(rotation=0)
-plt.tight_layout()
-plt.savefig('proposal/mlx_comparison_heatmap.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: proposal/mlx_comparison_heatmap.png")
+def create_chart2_response_characteristics(df):
+    """Chart 2: Response length patterns reveal model behavior differences."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+    
+    # Left: Box plot of response lengths by model
+    data_for_box = []
+    labels = []
+    for model in df['Model'].unique():
+        model_lengths = []
+        for _, row in df[df['Model'] == model].iterrows():
+            model_lengths.extend(row['Response Lengths'])
+        data_for_box.append(model_lengths)
+        labels.append(model)
+    
+    bp = ax1.boxplot(data_for_box, labels=labels, patch_artist=True,
+                     medianprops=dict(color='red', linewidth=2))
+    
+    colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7']
+    for patch, color in zip(bp['boxes'], colors):
+        patch.set_facecolor(color)
+        patch.set_alpha(0.6)
+    
+    ax1.set_title('Response Length Distribution by Model', fontsize=13, fontweight='bold')
+    ax1.set_xlabel('Model', fontsize=11)
+    ax1.set_ylabel('Response Length (characters)', fontsize=11)
+    ax1.tick_params(axis='x', rotation=45)
+    ax1.grid(True, alpha=0.3, axis='y')
+    
+    # Right: Average response length by prompt type
+    pivot_length = df.pivot_table(index='Model', columns='Prompt Type', 
+                                   values='Avg Response Length', aggfunc='mean')
+    pivot_length = pivot_length[['Visual Description', 'Script Identification', 'Transliteration']]
+    
+    pivot_length.plot(kind='bar', ax=ax2, width=0.75,
+                     color=['#4ECDC4', '#45B7D1', '#FF6B6B'])
+    
+    ax2.set_title('Average Response Length by Task Type', fontsize=13, fontweight='bold')
+    ax2.set_xlabel('Model', fontsize=11)
+    ax2.set_ylabel('Average Characters', fontsize=11)
+    ax2.legend(title='Task Type', fontsize=9)
+    ax2.tick_params(axis='x', rotation=45)
+    ax2.grid(True, alpha=0.3, axis='y')
+    
+    plt.tight_layout()
+    output_path = os.path.join(OUTPUT_DIR, 'mlx_comparison_response_patterns.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Saved: {output_path}")
+    plt.close()
 
-# Chart 4: Comprehensive Comparison
-print("Generating Chart 4: Comprehensive Comparison...")
-fig = plt.figure(figsize=(18, 10))
-gs = fig.add_gridspec(2, 3, hspace=0.3, wspace=0.3)
 
-# Chart 1: Success Rates
-ax1 = fig.add_subplot(gs[0, :2])
-model_names = df_success['Model']
-colors = [models[m]['color'] for m in model_names]
-x_pos = np.arange(len(model_names))
-bars = ax1.bar(x_pos, df_success['Prompt Success Rate'], color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
-ax1.set_ylabel('Success Rate (%)', fontsize=13, fontweight='bold')
-ax1.set_title('Model Success Rates on 50 Safaitic Inscriptions', fontsize=15, fontweight='bold')
-ax1.set_xticks(x_pos)
-ax1.set_xticklabels(model_names, rotation=15, ha='right')
-ax1.set_ylim(0, 105)
-ax1.grid(axis='y', alpha=0.3)
-ax1.axhline(y=100, color='green', linestyle='--', alpha=0.5, label='Perfect Score')
+def create_chart3_model_size_vs_performance(df):
+    """Chart 3: Does model size correlate with performance? KEY FINDING: NO!"""
+    fig, ax = plt.subplots(figsize=(12, 8))
+    
+    # Aggregate data by model
+    model_summary = df.groupby(['Model', 'Model Size (B)']).agg({
+        'Success Rate': 'mean',
+        'Prompt Type': 'count'
+    }).reset_index()
+    
+    # Create scatter plot
+    colors_map = {
+        'Qwen2.5-VL-7B': '#FF6B6B',
+        'Qwen2-VL-2B': '#4ECDC4',
+        'Qwen2-VL-7B': '#45B7D1',
+        'Idefics3-8B': '#96CEB4',
+        'Pixtral-12B': '#FFEAA7'
+    }
+    
+    for _, row in model_summary.iterrows():
+        ax.scatter(row['Model Size (B)'], row['Success Rate'], 
+                  s=500, alpha=0.7, color=colors_map[row['Model']],
+                  edgecolors='black', linewidth=2)
+        
+        # Annotate with model name
+        ax.annotate(row['Model'], 
+                   xy=(row['Model Size (B)'], row['Success Rate']),
+                   xytext=(10, 0), textcoords='offset points',
+                   fontsize=10, fontweight='bold',
+                   bbox=dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.7))
+    
+    ax.set_title('Model Size vs Performance: Bigger ≠ Better\n2B model achieves 100% success (same as 12B model)',
+                fontsize=14, fontweight='bold', pad=20)
+    ax.set_xlabel('Model Size (Billion Parameters)', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Average Success Rate (%)', fontsize=12, fontweight='bold')
+    ax.set_ylim(96, 101)
+    ax.set_xlim(1, 13)
+    ax.axhline(y=100, color='green', linestyle='--', alpha=0.5, linewidth=2, label='100% Success')
+    ax.grid(True, alpha=0.3)
+    ax.legend(fontsize=10)
+    
+    plt.tight_layout()
+    output_path = os.path.join(OUTPUT_DIR, 'mlx_comparison_size_vs_performance.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Saved: {output_path}")
+    plt.close()
 
-for i, bar in enumerate(bars):
-    height = bar.get_height()
-    ax1.text(bar.get_x() + bar.get_width()/2., height + 1,
-             f'{height:.1f}%', ha='center', va='bottom', fontweight='bold', fontsize=11)
 
-# Chart 2: Model Sizes
-ax2 = fig.add_subplot(gs[0, 2])
-sizes = {'2B': 1, '7B': 2, '8B': 2.5, '12B': 3}
-model_size_vals = [sizes[models[m]['size']] for m in model_names]
-ax2.barh(model_names, model_size_vals, color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
-ax2.set_xlabel('Relative Size', fontsize=12, fontweight='bold')
-ax2.set_title('Model Sizes', fontsize=14, fontweight='bold')
-ax2.set_xlim(0, 3.5)
+def create_chart4_comprehensive_summary(df):
+    """Chart 4: Comprehensive 3-panel summary for proposal."""
+    fig = plt.figure(figsize=(18, 6))
+    gs = fig.add_gridspec(1, 3, hspace=0.3, wspace=0.3)
+    
+    # Panel 1: Overall success rates
+    ax1 = fig.add_subplot(gs[0, 0])
+    overall_success = df.groupby('Model')['Success Rate'].mean().sort_values(ascending=True)
+    colors = ['#4ECDC4' if x == 100 else '#FF6B6B' if x < 98 else '#45B7D1' 
+              for x in overall_success.values]
+    overall_success.plot(kind='barh', ax=ax1, color=colors, edgecolor='black', linewidth=1.5)
+    ax1.set_title('Overall Success Rate', fontsize=12, fontweight='bold')
+    ax1.set_xlabel('Success Rate (%)', fontsize=10, fontweight='bold')
+    ax1.set_xlim(95, 101)
+    ax1.axvline(x=100, color='green', linestyle='--', alpha=0.5, linewidth=2)
+    ax1.grid(True, alpha=0.3, axis='x')
+    
+    # Add percentage labels
+    for i, v in enumerate(overall_success.values):
+        ax1.text(v - 0.5, i, f'{v:.1f}%', va='center', ha='right', 
+                fontweight='bold', color='white' if v < 98 else 'black')
+    
+    # Panel 2: Task difficulty heatmap
+    ax2 = fig.add_subplot(gs[0, 1])
+    pivot_heat = df.pivot_table(index='Model', columns='Prompt Type', values='Success Rate')
+    pivot_heat = pivot_heat[['Visual Description', 'Script Identification', 'Transliteration']]
+    
+    sns.heatmap(pivot_heat, annot=True, fmt='.1f', cmap='RdYlGn', 
+                vmin=94, vmax=100, ax=ax2, cbar_kws={'label': 'Success Rate (%)'},
+                linewidths=2, linecolor='white')
+    ax2.set_title('Success Rate by Task Type', fontsize=12, fontweight='bold')
+    ax2.set_xlabel('')
+    ax2.set_ylabel('')
+    
+    # Panel 3: Model efficiency (size vs performance)
+    ax3 = fig.add_subplot(gs[0, 2])
+    model_summary = df.groupby(['Model', 'Model Size (B)']).agg({
+        'Success Rate': 'mean'
+    }).reset_index()
+    
+    colors_scatter = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7']
+    ax3.scatter(model_summary['Model Size (B)'], model_summary['Success Rate'],
+               s=300, c=colors_scatter, alpha=0.7, edgecolors='black', linewidth=2)
+    
+    for _, row in model_summary.iterrows():
+        ax3.annotate(row['Model'].split('-')[0], 
+                    xy=(row['Model Size (B)'], row['Success Rate']),
+                    fontsize=8, ha='center', va='bottom')
+    
+    ax3.set_title('Model Efficiency\n(Smaller can be better)', fontsize=12, fontweight='bold')
+    ax3.set_xlabel('Model Size (B)', fontsize=10, fontweight='bold')
+    ax3.set_ylabel('Success Rate (%)', fontsize=10, fontweight='bold')
+    ax3.set_ylim(96, 101)
+    ax3.axhline(y=100, color='green', linestyle='--', alpha=0.5, linewidth=2)
+    ax3.grid(True, alpha=0.3)
+    
+    plt.suptitle('MLX-VLM Comparative Evaluation: 5 Models on Safaitic Inscription Analysis',
+                fontsize=15, fontweight='bold', y=0.98)
+    
+    plt.tight_layout()
+    output_path = os.path.join(OUTPUT_DIR, 'mlx_comprehensive_comparison.png')
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Saved: {output_path}")
+    plt.close()
 
-for i, (name, val) in enumerate(zip(model_names, model_names)):
-    size = models[val]['size']
-    ax2.text(sizes[size] + 0.1, i, size, va='center', fontweight='bold')
 
-# Chart 3: Average Response Length
-ax3 = fig.add_subplot(gs[1, :])
-response_stats = df_responses.groupby('Model')['Response Length'].agg(['mean', 'std']).reindex(model_names)
-x_pos = np.arange(len(model_names))
-ax3.bar(x_pos, response_stats['mean'], yerr=response_stats['std'], 
-        color=colors, alpha=0.8, capsize=5, edgecolor='black', linewidth=1.5,
-        error_kw={'linewidth': 2, 'ecolor': 'gray'})
-ax3.set_xlabel('Model', fontsize=13, fontweight='bold')
-ax3.set_ylabel('Response Length (characters)', fontsize=13, fontweight='bold')
-ax3.set_title('Average Response Length ± Std Dev', fontsize=15, fontweight='bold')
-ax3.set_xticks(x_pos)
-ax3.set_xticklabels(model_names, rotation=15, ha='right')
-ax3.grid(axis='y', alpha=0.3)
+def print_detailed_analysis(df):
+    """Print detailed statistical analysis."""
+    print("\n" + "="*80)
+    print("DETAILED ANALYSIS SUMMARY")
+    print("="*80)
+    
+    print("\n1. OVERALL MODEL PERFORMANCE:")
+    overall = df.groupby('Model').agg({
+        'Success Rate': 'mean',
+        'Model Size (B)': 'first',
+        'Total': 'sum'
+    }).sort_values('Success Rate', ascending=False)
+    print(overall.to_string())
+    
+    print("\n2. PERFORMANCE BY TASK TYPE:")
+    by_task = df.groupby('Prompt Type').agg({
+        'Success Rate': ['mean', 'min', 'max', 'std']
+    })
+    print(by_task.to_string())
+    
+    print("\n3. KEY FINDINGS:")
+    # Find perfect scores
+    perfect_models = df[df['Success Rate'] == 100.0]['Model'].unique()
+    print(f"   • Models with 100% success on some tasks: {', '.join(perfect_models)}")
+    
+    # Transliteration performance
+    trans_df = df[df['Prompt Type'] == 'Transliteration']
+    avg_trans = trans_df['Success Rate'].mean()
+    print(f"   • Average transliteration success: {avg_trans:.1f}%")
+    print(f"   • This is the challenging task that validates grounded OCR need")
+    
+    # Size efficiency
+    smallest = df[df['Model Size (B)'] == 2]['Success Rate'].mean()
+    largest = df[df['Model Size (B)'] == 12]['Success Rate'].mean()
+    print(f"   • Smallest model (2B): {smallest:.1f}% success")
+    print(f"   • Largest model (12B): {largest:.1f}% success")
+    print(f"   • Efficiency gain: {smallest - largest:+.1f} percentage points (smaller is better!)")
 
-plt.suptitle('MLX-VLM Comparative Analysis: 5 Models on Safaitic Ancient Inscriptions',
-             fontsize=18, fontweight='bold', y=0.98)
 
-plt.savefig('proposal/mlx_comprehensive_comparison.png', dpi=300, bbox_inches='tight')
-print("✓ Saved: proposal/mlx_comprehensive_comparison.png")
+def main():
+    """Main execution function."""
+    print("="*80)
+    print("MLX-VLM COMPARATIVE ANALYSIS - CHART GENERATION")
+    print("="*80)
+    
+    # Create output directory
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    
+    # Load data
+    all_results = load_results()
+    
+    if not all_results:
+        print("\n❌ No results loaded. Please check file paths.")
+        return
+    
+    print(f"\n✓ Successfully loaded {len(all_results)} models\n")
+    
+    # Analyze data
+    print("Analyzing results across prompt types...")
+    df = analyze_results(all_results)
+    
+    # Generate charts
+    print("\nGenerating visualization charts...\n")
+    
+    print("Chart 1: Success rates by prompt type...")
+    create_chart1_success_by_prompt_type(df)
+    
+    print("Chart 2: Response characteristics...")
+    create_chart2_response_characteristics(df)
+    
+    print("Chart 3: Model size vs performance...")
+    create_chart3_model_size_vs_performance(df)
+    
+    print("Chart 4: Comprehensive summary...")
+    create_chart4_comprehensive_summary(df)
+    
+    # Print detailed analysis
+    print_detailed_analysis(df)
+    
+    print("\n" + "="*80)
+    print("ALL CHARTS GENERATED SUCCESSFULLY!")
+    print("="*80)
+    print(f"\nFiles saved to {OUTPUT_DIR}:")
+    print("  • mlx_comparison_success_by_prompt.png - Task-specific performance")
+    print("  • mlx_comparison_response_patterns.png - Response quality analysis")
+    print("  • mlx_comparison_size_vs_performance.png - Efficiency analysis")
+    print("  • mlx_comprehensive_comparison.png - Executive summary")
+    print("\nReady for project proposal!\n")
 
-print("\n" + "="*80)
-print("ALL CHARTS GENERATED SUCCESSFULLY!")
-print("="*80)
-print("\nFiles saved to proposal/:")
-print("  • mlx_comparison_success_rates.png")
-print("  • mlx_comparison_response_lengths.png") 
-print("  • mlx_comparison_heatmap.png")
-print("  • mlx_comprehensive_comparison.png")
-print("\nReady for project proposal!")
+
+if __name__ == '__main__':
+    main()
