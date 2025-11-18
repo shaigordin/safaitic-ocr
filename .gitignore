@@ -20,8 +20,8 @@ data/examples/
 *.tif
 *.tiff
 
-# Exception: Allow the compressed images zip for GitHub Pages
-!docs/inscription_images.zip
+# Inscription images - host on GitHub Releases, not in repo
+docs/inscription_images.zip
 
 # Results (but keep docs/data for GitHub Pages)
 results/
